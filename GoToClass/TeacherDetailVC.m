@@ -1,27 +1,21 @@
 //
-//  TeacherListVC.m
+//  TeacherDetailVC.m
 //  GoToClass
 //
-//  Created by Leppard on 4/19/15.
+//  Created by Leppard on 4/20/15.
 //  Copyright (c) 2015 Leppard. All rights reserved.
 //
 
-#import "TeacherListVC.h"
-#import "Course.h"
 #import "TeacherDetailVC.h"
 
-
-@interface TeacherListVC ()
+@interface TeacherDetailVC ()
 
 @end
 
-@implementation TeacherListVC
+@implementation TeacherDetailVC
 
 - (void)viewDidLoad {
-    NSData *data = [[NSUserDefaults standardUserDefaults]objectForKey:@"CoursesList"];
-    self.coursesList = [NSKeyedUnarchiver unarchiveObjectWithData:data];  
     [super viewDidLoad];
-
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -38,56 +32,28 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return [self.coursesList count];
+    // Return the number of rows in the section.
+    return 1;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
-    Course *course = [[Course alloc]init];
-    course = self.coursesList[indexPath.row];
-    cell.textLabel.text = course.teacher;
+    
+    cell.textLabel.text = self.course.name;
+    
     return cell;
 }
 
-#pragma mark - Control viewing info
-
-- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
-    
-    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherInfo"];
-    
-    Course *course = [[Course alloc]init];
-    course = self.coursesList[indexPath.row];
-    
-    vc.navigationItem.title = course.teacher;
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    [self performSegueWithIdentifier:@"pushToTeacherDetail" sender:(self.coursesList[indexPath.row])];
-
-}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-
-    if([segue.identifier isEqualToString:@"pushToTeacherDetail"]){
-
-        TeacherDetailVC *vc = segue.destinationViewController;
-        vc.course = sender;
-    }
-}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -131,11 +97,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
--(IBAction)backToRootSelect:(id)sender{
-    
-    [self.navigationController popViewControllerAnimated:YES];
-    
-}
 
 @end

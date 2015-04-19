@@ -12,20 +12,24 @@
 	<dict>
 		<key>109D175E1822C9A8528FDE6830D2907122C383A5</key>
 		<string>https://github.com/Leppard/SITP.git</string>
+		<key>D9E0BA7039772735B5E1B40E959A51C4FE638EE6</key>
+		<string>https://github.com/Leppard/GoToClass.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GoToClass/GoToClass.xcodeproj</string>
+	<string>GoToClass.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>109D175E1822C9A8528FDE6830D2907122C383A5</key>
 		<string>../../..</string>
+		<key>D9E0BA7039772735B5E1B40E959A51C4FE638EE6</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Leppard/SITP.git</string>
+	<string>https://github.com/Leppard/GoToClass.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>109D175E1822C9A8528FDE6830D2907122C383A5</string>
+	<string>D9E0BA7039772735B5E1B40E959A51C4FE638EE6</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -34,7 +38,15 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>109D175E1822C9A8528FDE6830D2907122C383A5</string>
 			<key>IDESourceControlWCCName</key>
-			<string>%E8%B9%AD%E8%AF%BE%E6%97%8F</string>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D9E0BA7039772735B5E1B40E959A51C4FE638EE6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GoToClass</string>
 		</dict>
 	</array>
 </dict>
