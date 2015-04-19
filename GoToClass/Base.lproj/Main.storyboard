@@ -50,18 +50,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="484.5" y="312.5"/>
+            <point key="canvasLocation" x="458.5" y="317.5"/>
         </scene>
-        <!--Teacher ListVC-->
+        <!--Teacher List VC-->
         <scene sceneID="Qzv-tb-7hj">
             <objects>
-                <tableViewController id="CLN-zK-GaY" customClass="TeacherListVC" sceneMemberID="viewController">
+                <tableViewController id="CLN-zK-GaY" userLabel="Teacher List VC" customClass="TeacherListVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="e4f-aw-6Zf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="bFc-6j-hOd">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="Cell" id="bFc-6j-hOd">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bFc-6j-hOd" id="eyO-gW-epM">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -85,7 +85,27 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vjf-PD-Zyv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="983.5" y="317.5"/>
+            <point key="canvasLocation" x="961.5" y="312.5"/>
+        </scene>
+        <!--Teacher Info VC-->
+        <scene sceneID="ZYs-lR-HEe">
+            <objects>
+                <viewController storyboardIdentifier="TeacherInfo" id="Xcx-dL-igs" userLabel="Teacher Info VC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gij-9t-EDu"/>
+                        <viewControllerLayoutGuide type="bottom" id="DDp-7d-Vfd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vkX-gN-AFg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Teacher Info" id="8sh-Vn-Epe"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zvt-X9-IIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1509.5" y="312.5"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
