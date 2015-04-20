@@ -15,7 +15,7 @@
 @implementation TeacherDetailVC
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+//    [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -38,18 +38,23 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell;
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    }
+        
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TeacherDetailCell" owner:self options:nil];
+        
+        self.customCell = [nib objectAtIndex:0];
+        
+        cell = self.customCell;
     
-    cell.textLabel.text = self.course.name;
+    self.courseName.text = self.course.name;
+    self.week.text = [NSString stringWithFormat:@"%@",self.course.weekDate];
+    self.time.text = [NSString stringWithFormat:@"%@",self.course.dayTime];
     
     return cell;
 }

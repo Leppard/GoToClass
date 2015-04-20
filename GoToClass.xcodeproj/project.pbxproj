@@ -18,6 +18,7 @@
 		8C7E81D01AE3E0B3001CE796 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E81CF1AE3E0B3001CE796 /* Course.m */; };
 		8C8B55AD1AE3E7B200E75E02 /* CoursesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B55AC1AE3E7B200E75E02 /* CoursesModel.m */; };
 		8C8B55B01AE417A700E75E02 /* TeacherDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B55AF1AE417A700E75E02 /* TeacherDetailVC.m */; };
+		8C8B55B21AE4BD5700E75E02 /* TeacherDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C8B55B11AE4BD5700E75E02 /* TeacherDetailCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		8C8B55AC1AE3E7B200E75E02 /* CoursesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoursesModel.m; sourceTree = "<group>"; };
 		8C8B55AE1AE417A700E75E02 /* TeacherDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherDetailVC.h; sourceTree = "<group>"; };
 		8C8B55AF1AE417A700E75E02 /* TeacherDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherDetailVC.m; sourceTree = "<group>"; };
+		8C8B55B11AE4BD5700E75E02 /* TeacherDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherDetailCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				8C7E81A81AE3BA9D001CE796 /* AppDelegate.h */,
 				8C7E81A91AE3BA9D001CE796 /* AppDelegate.m */,
 				8C7E81AE1AE3BA9D001CE796 /* Main.storyboard */,
+				8C8B55B11AE4BD5700E75E02 /* TeacherDetailCell.xib */,
 				8C7E81B11AE3BA9D001CE796 /* Images.xcassets */,
 				8C7E81B31AE3BA9D001CE796 /* LaunchScreen.xib */,
 				8C7E81A41AE3BA9D001CE796 /* Supporting Files */,
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C7E81B01AE3BA9D001CE796 /* Main.storyboard in Resources */,
+				8C8B55B21AE4BD5700E75E02 /* TeacherDetailCell.xib in Resources */,
 				8C7E81B51AE3BA9D001CE796 /* LaunchScreen.xib in Resources */,
 				8C7E81B21AE3BA9D001CE796 /* Images.xcassets in Resources */,
 			);
