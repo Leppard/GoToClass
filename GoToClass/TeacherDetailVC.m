@@ -38,19 +38,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 2;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    UITableViewCell *cell;
-    
         
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TeacherDetailCell" owner:self options:nil];
         
-        self.customCell = [nib objectAtIndex:0];
-        
-        cell = self.customCell;
+        UITableViewCell *cell = [nib objectAtIndex:0];
     
     self.courseName.text = self.course.name;
     self.week.text = [NSString stringWithFormat:@"%@",self.course.weekDate];

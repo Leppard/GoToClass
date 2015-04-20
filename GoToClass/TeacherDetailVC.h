@@ -16,6 +16,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *week;
 @property (weak, nonatomic) IBOutlet UILabel *time;
 
-@property (nonatomic, strong) IBOutlet UITableViewCell *customCell;
-
 @end

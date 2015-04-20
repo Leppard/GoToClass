@@ -7,7 +7,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TeacherDetailVC">
             <connections>
                 <outlet property="courseName" destination="gTC-75-PpQ" id="TPI-f8-2Mb"/>
-                <outlet property="customCell" destination="eof-Tm-yhw" id="Tz0-i6-0gi"/>
                 <outlet property="time" destination="Pcv-DH-fQJ" id="P4p-nR-U32"/>
                 <outlet property="week" destination="Rjx-Vg-ye9" id="I3P-3z-2vq"/>
             </connections>
