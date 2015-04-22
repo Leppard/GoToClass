@@ -62,6 +62,7 @@
             weekStr = [NSString stringWithFormat:@"周六"];
             break;
         default:
+            weekStr = [NSString stringWithFormat:@"星期录入错误"];
             break;
     }
     
@@ -88,6 +89,7 @@
             dayStr = [NSString stringWithFormat:@"晚上1-3节"];
             break;
         default:
+            dayStr = [NSString stringWithFormat:@"上课时间录入错误"];
             break;
     }
     

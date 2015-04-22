@@ -44,8 +44,6 @@
     
     EKEventStore *eventDB = [[EKEventStore alloc] init];
     
-    
-    
     [eventDB requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error)
      {
       
@@ -64,26 +62,26 @@
              
              [compt setDay:compt.day+1];
              
+             compt = [self setEventTime:self.course.dayTime usingDateComponent:compt];
+             
              NSDate *aimDay = [cal dateFromComponents:compt];
              
-             NSTimeZone *zone = [NSTimeZone systemTimeZone];
-             NSInteger interval = [zone secondsFromGMTForDate:aimDay];
-             NSDate *aimTime = [aimDay dateByAddingTimeInterval:interval];
+//             NSTimeZone *zone = [NSTimeZone systemTimeZone];
+//             NSInteger interval = [zone secondsFromGMTForDate:aimDay];
+//             NSDate *aimTime = [aimDay dateByAddingTimeInterval:interval];
+
+             //系统Calendar在格林尼治时间上自动会＋8个小时调整到东八区时间，所以直接输入格林尼治时间
+             myEvent.startDate = aimDay;
              
+             if(self.course.dayTime.intValue != 5){
+             myEvent.endDate  = [aimDay dateByAddingTimeInterval:6000];
+             }
+             else{
+             myEvent.endDate  = [aimDay dateByAddingTimeInterval:9300];
+             }
              
-             //    NSTimeInterval secondsPerDay = 24*60*60;
-             //    NSTimeZone *zone = [NSTimeZone systemTimeZone];
-             //    NSDate *date = [NSDate date];
-             //    NSInteger i = [zone secondsFromGMTForDate:date];
-             //
-             //    NSDate *tomorrow = [NSDate dateWithTimeIntervalSinceNow:secondsPerDay];
-             //    NSDate *local = [tomorrow dateByAddingTimeInterval:i];
-             //    NSLog(@"myDate = %@",local);
-             
-             myEvent.startDate = aimTime;
-             
-             myEvent.endDate   = aimTime;
-             myEvent.allDay = YES;
+             myEvent.allDay = NO;
+                 
              
              [myEvent setCalendar:[eventDB defaultCalendarForNewEvents]];
              
@@ -103,5 +101,40 @@
          
      }];
 }
+
+#pragma mark - Set Event Time
+
+- (NSDateComponents *)setEventTime:(NSNumber *)dayTime usingDateComponent:(NSDateComponents *)compt{
+    
+    NSInteger i = dayTime.intValue;
+    
+    switch (i) {
+        case 1:
+            [compt setHour:8];
+            [compt setMinute:0];
+            break;
+        case 2:
+            [compt setHour:10];
+            [compt setMinute:0];
+            break;
+        case 3:
+            [compt setHour:13];
+            [compt setMinute:30];
+            break;
+        case 4:
+            [compt setHour:15];
+            [compt setMinute:25];
+            break;
+        case 5:
+            [compt setHour:18];
+            [compt setMinute:30];
+            break;
+        default:
+            break;
+    }
+    
+    return compt;
+}
+
 @end
 
