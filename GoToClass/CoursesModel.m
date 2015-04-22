@@ -21,10 +21,14 @@
             Course *course1 = [[Course alloc]init];
             course1.name = @"English";
             course1.teacher = @"Li";
+            course1.weekDate = [NSNumber numberWithInt:3];
+            course1.dayTime = [NSNumber numberWithInt:1];
             
             Course *course2 = [[Course alloc]init];
             course2.name = @"Math";
             course2.teacher = @"Zhang";
+            course2.weekDate = [NSNumber numberWithInt:4];
+            course2.dayTime = [NSNumber numberWithInt:3];
             
             [self.coursesList addObject:course1];
             [self.coursesList addObject:course2];

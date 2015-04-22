@@ -75,7 +75,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="bYv-hr-wWE">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="HmJ-Mz-kTC">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="HmJ-Mz-kTC">
                             <connections>
                                 <action selector="backToRootSelect:" destination="CLN-zK-GaY" id="lbF-3a-Djh"/>
                             </connections>
@@ -112,12 +112,95 @@
                             <outlet property="delegate" destination="YFI-2Q-cAi" id="NmU-Z0-75q"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="课程" id="KAy-a9-Lqo"/>
+                    <navigationItem key="navigationItem" title="课程" id="KAy-a9-Lqo">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="7N1-pi-q1L"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="Lle-pO-Svv" kind="push" identifier="pushToSelection" id="paE-A5-i4N"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pmi-EK-hRS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1505.5" y="312.5"/>
+        </scene>
+        <!--Choose Course VC-->
+        <scene sceneID="8o5-ik-mOe">
+            <objects>
+                <viewController id="Lle-pO-Svv" userLabel="Choose Course VC" customClass="ChooseCourseVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cGe-Vt-5Db"/>
+                        <viewControllerLayoutGuide type="bottom" id="euZ-bq-8fx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="064-Yb-oMI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="课程名称：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcr-Ys-eod">
+                                <rect key="frame" x="79" y="111" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="上课时间：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vah-M2-qnN">
+                                <rect key="frame" x="105" y="249" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFH-Tq-wT6">
+                                <rect key="frame" x="198" y="219" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYn-sf-fDH">
+                                <rect key="frame" x="189" y="111" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3u-IS-Nws">
+                                <rect key="frame" x="201" y="278" width="158" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xJ-Ap-vNR">
+                                <rect key="frame" x="157" y="508" width="60" height="30"/>
+                                <state key="normal" title="查看地图">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="去蹭课！" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31q-R3-Vga">
+                                <rect key="frame" x="59" y="395" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9y-Jc-lSQ">
+                                <rect key="frame" x="157" y="458" width="60" height="30"/>
+                                <state key="normal" title="加入日程">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToCalendar:" destination="Lle-pO-Svv" eventType="touchUpInside" id="v4m-ef-gzh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ejl-ML-yfy"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="courseName" destination="jYn-sf-fDH" id="nUX-px-P30"/>
+                        <outlet property="time" destination="R3u-IS-Nws" id="Ox5-cU-HxW"/>
+                        <outlet property="week" destination="CFH-Tq-wT6" id="rt3-yE-qdr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KnB-8j-yLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2109.5" y="317.5"/>
         </scene>
         <!--Teacher Info VC-->
         <scene sceneID="ZYs-lR-HEe">

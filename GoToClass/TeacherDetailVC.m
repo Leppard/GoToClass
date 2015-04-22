@@ -7,6 +7,7 @@
 //
 
 #import "TeacherDetailVC.h"
+#import "ChooseCourseVC.h"
 
 @interface TeacherDetailVC ()
 
@@ -48,10 +49,29 @@
         UITableViewCell *cell = [nib objectAtIndex:0];
     
     self.courseName.text = self.course.name;
-    self.week.text = [NSString stringWithFormat:@"%@",self.course.weekDate];
-    self.time.text = [NSString stringWithFormat:@"%@",self.course.dayTime];
+    self.week.text = [self.course setWeekDayFormat:self.course.weekDate];
+    self.time.text = [self.course setDayTimeFormat:self.course.dayTime];
     
     return cell;
+}
+
+
+#pragma mark - Selection Control
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self performSegueWithIdentifier:@"pushToSelection" sender:self.course];
+
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([segue.identifier isEqualToString:@"pushToSelection"]) {
+        ChooseCourseVC *vc = segue.destinationViewController;
+        vc.course = sender;
+    }
+
+
 }
 
 /*

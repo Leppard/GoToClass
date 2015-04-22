@@ -19,6 +19,7 @@
 		8C8B55AD1AE3E7B200E75E02 /* CoursesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B55AC1AE3E7B200E75E02 /* CoursesModel.m */; };
 		8C8B55B01AE417A700E75E02 /* TeacherDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B55AF1AE417A700E75E02 /* TeacherDetailVC.m */; };
 		8C8B55B21AE4BD5700E75E02 /* TeacherDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C8B55B11AE4BD5700E75E02 /* TeacherDetailCell.xib */; };
+		8C8B55B51AE4E59E00E75E02 /* ChooseCourseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B55B41AE4E59E00E75E02 /* ChooseCourseVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		8C8B55AE1AE417A700E75E02 /* TeacherDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherDetailVC.h; sourceTree = "<group>"; };
 		8C8B55AF1AE417A700E75E02 /* TeacherDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherDetailVC.m; sourceTree = "<group>"; };
 		8C8B55B11AE4BD5700E75E02 /* TeacherDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherDetailCell.xib; sourceTree = "<group>"; };
+		8C8B55B31AE4E59E00E75E02 /* ChooseCourseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseCourseVC.h; sourceTree = "<group>"; };
+		8C8B55B41AE4E59E00E75E02 /* ChooseCourseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseCourseVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				8C7E81CB1AE3BD7D001CE796 /* TeacherListVC.m */,
 				8C8B55AE1AE417A700E75E02 /* TeacherDetailVC.h */,
 				8C8B55AF1AE417A700E75E02 /* TeacherDetailVC.m */,
+				8C8B55B31AE4E59E00E75E02 /* ChooseCourseVC.h */,
+				8C8B55B41AE4E59E00E75E02 /* ChooseCourseVC.m */,
 				8C7E81AB1AE3BA9D001CE796 /* ViewController.h */,
 				8C7E81AC1AE3BA9D001CE796 /* ViewController.m */,
 				8C7E81A81AE3BA9D001CE796 /* AppDelegate.h */,
@@ -257,6 +262,7 @@
 				8C7E81AA1AE3BA9D001CE796 /* AppDelegate.m in Sources */,
 				8C7E81A71AE3BA9D001CE796 /* main.m in Sources */,
 				8C7E81CC1AE3BD7D001CE796 /* TeacherListVC.m in Sources */,
+				8C8B55B51AE4E59E00E75E02 /* ChooseCourseVC.m in Sources */,
 				8C7E81D01AE3E0B3001CE796 /* Course.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,8 +390,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GoToClass/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -394,8 +402,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GoToClass/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

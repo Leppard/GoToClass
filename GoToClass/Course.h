@@ -17,5 +17,8 @@
 @property(nonatomic,strong) NSNumber *weekDate;
 @property(nonatomic,strong) NSNumber *dayTime;
 
+- (NSString*)setWeekDayFormat:(NSNumber*) weekDay;
+- (NSString*)setDayTimeFormat:(NSNumber*) dayTime;
+
 
 @end
