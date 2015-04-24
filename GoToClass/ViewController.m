@@ -24,4 +24,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)jumpTest:(id)sender {
+    
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"hahah" message:@"haha" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil , nil];
+    [alert show];
+}
 @end

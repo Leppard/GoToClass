@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)jumpTest:(id)sender;
 
 @end
 

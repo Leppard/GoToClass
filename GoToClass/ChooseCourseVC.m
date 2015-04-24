@@ -141,12 +141,11 @@
 - (void)lookUpMap{
     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"baidumap://map/"]]){
         
-//        NSString *urlString = [NSString stringWithFormat:@"baidumap://map/direction?origin=latlng:%f,%f|name:我的位置&destination=latlng:%f,%f|name:%@&mode=transit",
-//                               startCoor.latitude, startCoor.longitude, endCoor.latitude, endCoor.longitude, toName];
-//        
-//        NSDictionary *dic = @{@"name": @"百度地图",
-//                              @"url": urlString};
-//        [self.availableMaps addObject:dic];
+        NSString *urlString = [NSString stringWithFormat:@"baidumap://map/geocoder?address=上海市嘉定区同济大学济事楼&src=edu.tac|GoToClass"];
+        urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSURL *url = [NSURL URLWithString:urlString];
+        [[UIApplication sharedApplication]openURL:url];
+
     }
     else{
         UIAlertView *alert = [[UIAlertView alloc]
