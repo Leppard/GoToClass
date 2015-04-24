@@ -14,6 +14,7 @@
 @property(nonatomic,strong) NSString *teacher;
 @property(nonatomic,strong) NSString *school;
 @property(nonatomic,strong) NSString *address;
+@property(nonatomic,strong) NSString *room;
 @property(nonatomic,strong) NSNumber *weekDate;
 @property(nonatomic,strong) NSNumber *dayTime;
 

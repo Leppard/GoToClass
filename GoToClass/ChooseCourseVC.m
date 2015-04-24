@@ -40,15 +40,46 @@
 }
 */
 
-- (IBAction)addToCalendar:(id)sender {
+#pragma mark - Button Action
+
+- (IBAction)confirmToChooseClass:(id)sender {
+    
+    UIActionSheet *confirm = [[UIActionSheet alloc] init];
+    
+    confirm.title = @"已添加到蹭课表!";
+    
+    [confirm addButtonWithTitle:@"加入日程"];
+    [confirm addButtonWithTitle:@"查看地图"];
+    
+    [confirm addButtonWithTitle:@"确定"];
+    
+    confirm.cancelButtonIndex = 2;
+    confirm.delegate = self;
+    
+    [confirm showInView:self.view];
+}
+
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    if (buttonIndex == 0) {
+        [self addToCalendar];
+    }
+    
+    else if(buttonIndex == 1){
+        [self lookUpMap];
+    }
+}
+
+- (void)addToCalendar{
     
     EKEventStore *eventDB = [[EKEventStore alloc] init];
     
     [eventDB requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error)
      {
-      
+         
          if (granted) {
-        
+             
              EKEvent *myEvent  = [EKEvent eventWithEventStore:eventDB];
              
              myEvent.title = [NSString stringWithFormat:@"去蹭课：%@",self.course.name];
@@ -59,29 +90,34 @@
              NSDateComponents *compt = [[NSDateComponents alloc]init];
              
              compt = [cal components:unitFlags fromDate:now];
-             
-             [compt setDay:compt.day+1];
+             NSInteger daysToAdd = self.course.weekDate.intValue - compt.weekday;
+             if (daysToAdd>=0) {
+                 [compt setDay:compt.day+daysToAdd];
+             }
+             else{
+                 [compt setDay:compt.day+7+daysToAdd];
+             }
              
              compt = [self setEventTime:self.course.dayTime usingDateComponent:compt];
              
              NSDate *aimDay = [cal dateFromComponents:compt];
              
-//             NSTimeZone *zone = [NSTimeZone systemTimeZone];
-//             NSInteger interval = [zone secondsFromGMTForDate:aimDay];
-//             NSDate *aimTime = [aimDay dateByAddingTimeInterval:interval];
-
+             //             NSTimeZone *zone = [NSTimeZone systemTimeZone];
+             //             NSInteger interval = [zone secondsFromGMTForDate:aimDay];
+             //             NSDate *aimTime = [aimDay dateByAddingTimeInterval:interval];
+             
              //系统Calendar在格林尼治时间上自动会＋8个小时调整到东八区时间，所以直接输入格林尼治时间
              myEvent.startDate = aimDay;
              
              if(self.course.dayTime.intValue != 5){
-             myEvent.endDate  = [aimDay dateByAddingTimeInterval:6000];
+                 myEvent.endDate  = [aimDay dateByAddingTimeInterval:6000];
              }
              else{
-             myEvent.endDate  = [aimDay dateByAddingTimeInterval:9300];
+                 myEvent.endDate  = [aimDay dateByAddingTimeInterval:9300];
              }
              
              myEvent.allDay = NO;
-                 
+             
              
              [myEvent setCalendar:[eventDB defaultCalendarForNewEvents]];
              
@@ -91,16 +127,39 @@
              
              
              UIAlertView *alert = [[UIAlertView alloc]
-                                   initWithTitle:@"Event Created"
-                                   message:@"Yay!?"
+                                   initWithTitle:@"创建提醒成功！"
+                                   message:@"已添加到日历"
                                    delegate:self
-                                   cancelButtonTitle:@"Okay"
+                                   cancelButtonTitle:@"确定"
                                    otherButtonTitles:nil];
              [alert show];
          }
          
      }];
 }
+
+- (void)lookUpMap{
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"baidumap://map/"]]){
+        
+//        NSString *urlString = [NSString stringWithFormat:@"baidumap://map/direction?origin=latlng:%f,%f|name:我的位置&destination=latlng:%f,%f|name:%@&mode=transit",
+//                               startCoor.latitude, startCoor.longitude, endCoor.latitude, endCoor.longitude, toName];
+//        
+//        NSDictionary *dic = @{@"name": @"百度地图",
+//                              @"url": urlString};
+//        [self.availableMaps addObject:dic];
+    }
+    else{
+        UIAlertView *alert = [[UIAlertView alloc]
+                            initWithTitle:@"打开失败！"
+                            message:@"没有找到百度地图"
+                            delegate:self
+                            cancelButtonTitle:@"确定"
+                            otherButtonTitles:nil, nil];
+        [alert show];
+    
+    }
+}
+
 
 #pragma mark - Set Event Time
 

@@ -16,6 +16,7 @@
     [aCoder encodeObject:self.teacher forKey:@"teacher"];
     [aCoder encodeObject:self.school forKey:@"school"];
     [aCoder encodeObject:self.address forKey:@"address"];
+    [aCoder encodeObject:self.room forKey:@"room"];
     [aCoder encodeObject:self.weekDate forKey:@"weekDate"];
     [aCoder encodeObject:self.dayTime forKey:@"dayTime"];
 
@@ -28,6 +29,7 @@
         self.teacher = [aDecoder decodeObjectForKey:@"teacher"];
         self.school = [aDecoder decodeObjectForKey:@"school"];
         self.address = [aDecoder decodeObjectForKey:@"address"];
+        self.room = [aDecoder decodeObjectForKey:@"room"];
         self.weekDate = [aDecoder decodeObjectForKey:@"weekDate"];
         self.dayTime = [aDecoder decodeObjectForKey:@"dayTime"];
     }

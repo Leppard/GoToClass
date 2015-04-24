@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "Course.h"
 
-@interface ChooseCourseVC : UIViewController<UIAlertViewDelegate>
+@interface ChooseCourseVC : UIViewController<UIAlertViewDelegate,UIActionSheetDelegate>
 
 @property(nonatomic, strong) Course *course;
 @property (weak, nonatomic) IBOutlet UILabel *courseName;
 @property (weak, nonatomic) IBOutlet UILabel *week;
 @property (weak, nonatomic) IBOutlet UILabel *time;
-- (IBAction)addToCalendar:(id)sender;
+- (IBAction)confirmToChooseClass:(id)sender;
 
 @end
