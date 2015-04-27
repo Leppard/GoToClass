@@ -18,8 +18,8 @@
 @implementation TeacherListVC
 
 - (void)viewDidLoad {
-    NSData *data = [[NSUserDefaults standardUserDefaults]objectForKey:@"CoursesList"];
-    self.coursesList = [NSKeyedUnarchiver unarchiveObjectWithData:data];  
+    NSData *data = [[NSUserDefaults standardUserDefaults]objectForKey:@"NoRepeatTeachersList"];
+    self.noRepeatTeachersList = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     [super viewDidLoad];
 
     
@@ -44,8 +44,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return [self.coursesList count];
+    return [self.noRepeatTeachersList count];
 }
 
 
@@ -55,9 +54,9 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
-    Course *course = [[Course alloc]init];
-    course = self.coursesList[indexPath.row];
-    cell.textLabel.text = course.teacher;
+    
+    NSString *teacherName = self.noRepeatTeachersList[indexPath.row];
+    cell.textLabel.text = teacherName;
     return cell;
 }
 
@@ -67,16 +66,16 @@
     
     UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherInfo"];
     
-    Course *course = [[Course alloc]init];
-    course = self.coursesList[indexPath.row];
+    NSString *teacherName = self.noRepeatTeachersList[indexPath.row];
     
-    vc.navigationItem.title = course.teacher;
+    vc.navigationItem.title = teacherName;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *teacherName = self.noRepeatTeachersList[indexPath.row];
     
-    [self performSegueWithIdentifier:@"pushToTeacherDetail" sender:(self.coursesList[indexPath.row])];
+    [self performSegueWithIdentifier:@"pushToTeacherDetail" sender:(teacherName)];
 
 }
 
@@ -85,7 +84,16 @@
     if([segue.identifier isEqualToString:@"pushToTeacherDetail"]){
 
         TeacherDetailVC *vc = segue.destinationViewController;
-        vc.course = sender;
+        NSData *data = [[NSUserDefaults standardUserDefaults]objectForKey:@"CoursesList"];
+        NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        
+        NSMutableArray *courseOfTeacher = [[NSMutableArray alloc]init];
+        for(Course *course in array){
+            if([course.teacher isEqualToString:sender]){
+                [courseOfTeacher addObject:course];
+            }
+        }
+        vc.courseListOfTeacher = courseOfTeacher;
     }
 }
 /*

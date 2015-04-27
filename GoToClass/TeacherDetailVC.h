@@ -11,7 +11,7 @@
 
 @interface TeacherDetailVC : UITableViewController
 
-@property(nonatomic, strong) Course *course;
+@property(nonatomic, strong) NSMutableArray *courseListOfTeacher;
 @property (weak, nonatomic) IBOutlet UILabel *courseName;
 @property (weak, nonatomic) IBOutlet UILabel *week;
 @property (weak, nonatomic) IBOutlet UILabel *time;

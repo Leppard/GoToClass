@@ -140,8 +140,7 @@
 
 - (void)lookUpMap{
     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"baidumap://map/"]]){
-        
-        NSString *urlString = [NSString stringWithFormat:@"baidumap://map/geocoder?address=上海市嘉定区同济大学济事楼&src=edu.tac|GoToClass"];
+        NSString *urlString = [NSString stringWithFormat:@"baidumap://map/geocoder?address=%@&src=edu.tac|GoToClass",self.course.address];
         urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         NSURL *url = [NSURL URLWithString:urlString];
         [[UIApplication sharedApplication]openURL:url];

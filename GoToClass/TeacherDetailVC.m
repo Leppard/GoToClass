@@ -39,18 +39,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return [self.courseListOfTeacher count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
         
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TeacherDetailCell" owner:self options:nil];
         
-        UITableViewCell *cell = [nib objectAtIndex:0];
+    UITableViewCell *cell = [nib objectAtIndex:0];
     
-    self.courseName.text = self.course.name;
-    self.week.text = [self.course setWeekDayFormat:self.course.weekDate];
-    self.time.text = [self.course setDayTimeFormat:self.course.dayTime];
+    Course *course = self.courseListOfTeacher[indexPath.row];
+    self.courseName.text = course.name;
+    self.week.text = [course setWeekDayFormat:course.weekDate];
+    self.time.text = [course setDayTimeFormat:course.dayTime];
     
     return cell;
 }
@@ -60,7 +61,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [self performSegueWithIdentifier:@"pushToSelection" sender:self.course];
+    [self performSegueWithIdentifier:@"pushToSelection" sender:self.courseListOfTeacher[indexPath.row]];
 
 }
 

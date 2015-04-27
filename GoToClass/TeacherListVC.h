@@ -10,6 +10,6 @@
 
 @interface TeacherListVC : UITableViewController
 
-@property(nonatomic, strong)NSMutableArray *coursesList;
+@property(nonatomic, strong)NSArray *noRepeatTeachersList;
 
 @end
