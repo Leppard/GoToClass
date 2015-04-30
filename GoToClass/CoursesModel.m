@@ -16,15 +16,23 @@
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.coursesList];
    
     [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"CoursesList"];
+    Course *course = self.coursesList[0];
+    NSMutableArray *array = [[NSMutableArray alloc]initWithObjects:course.teacher, nil];
     
-    NSMutableSet *set = [[NSMutableSet alloc]init];
     for(Course *course in self.coursesList){
-    
-        [set addObject:course.teacher];
+        BOOL flag = false;
+        for(NSInteger i = 0; i<array.count;i++){
+            if([course.teacher isEqualToString:array[i]]){
+                flag = TRUE;
+                break;
+            }
+        }
+        if(flag == false){
+            [array addObject:course.teacher];
+        }
     }
     
-    
-    NSArray *noRepeatCoursesList = [set allObjects];
+    NSArray *noRepeatCoursesList = array;
     
     NSData *noRepeatData = [NSKeyedArchiver archivedDataWithRootObject:noRepeatCoursesList];
     
