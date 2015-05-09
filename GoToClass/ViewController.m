@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UINavigationController *vc =  self.navigationController;
+    vc.navigationBarHidden = YES;
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -24,9 +27,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)jumpTest:(id)sender {
-    
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"hahah" message:@"haha" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil , nil];
-    [alert show];
-}
 @end

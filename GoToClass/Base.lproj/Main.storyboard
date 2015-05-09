@@ -33,34 +33,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frontPage" translatesAutoresizingMaskIntoConstraints="NO" id="jdr-YP-jty">
+                                <rect key="frame" x="-5" y="0.0" width="393" height="672"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3m-Kb-SPp">
-                                <rect key="frame" x="128" y="218" width="118" height="77"/>
-                                <state key="normal" title="搜老师">
+                                <rect key="frame" x="53" y="20" width="71" height="184"/>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="CLN-zK-GaY" kind="push" id="HOJ-7V-n8I"/>
                                 </connections>
                             </button>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k21-SW-b9F">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem title="我的收藏" width="171" style="plain" id="nF5-qD-qR1">
-                                        <connections>
-                                            <action selector="jumpTest:" destination="vXZ-lx-hvc" id="Jt1-L1-id8"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="oyY-YR-reU"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="458.5" y="317.5"/>
+            <point key="canvasLocation" x="484.5" y="312.5"/>
         </scene>
         <!--Teacher List VC-->
         <scene sceneID="Qzv-tb-7hj">
@@ -222,6 +216,9 @@
             <point key="canvasLocation" x="961.5" y="1198.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="frontPage" width="3125" height="5559"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
