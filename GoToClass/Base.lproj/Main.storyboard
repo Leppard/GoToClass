@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="UTk-NC-8sG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
@@ -7,19 +7,19 @@
         <!--Navigation Controller-->
         <scene sceneID="F17-ki-XPT">
             <objects>
-                <navigationController id="UTk-NC-8sG" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TeachersListNC" id="UTk-NC-8sG" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MIL-Ss-tsE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="UNn-Wv-Aff"/>
+                        <segue destination="CLN-zK-GaY" kind="relationship" relationship="rootViewController" id="Xcy-vy-DBE"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lR8-uf-RuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-166" y="318"/>
+            <point key="canvasLocation" x="349.5" y="312.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -36,13 +36,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frontPage" translatesAutoresizingMaskIntoConstraints="NO" id="jdr-YP-jty">
                                 <rect key="frame" x="-5" y="0.0" width="393" height="672"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3m-Kb-SPp">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3m-Kb-SPp">
                                 <rect key="frame" x="53" y="20" width="71" height="184"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CLN-zK-GaY" kind="push" id="HOJ-7V-n8I"/>
+                                    <action selector="btnSearchTeacher:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ezF-kU-GIQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="484.5" y="312.5"/>
+            <point key="canvasLocation" x="-181.5" y="312.5"/>
         </scene>
         <!--Teacher List VC-->
         <scene sceneID="Qzv-tb-7hj">

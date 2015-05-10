@@ -14,6 +14,8 @@
 		<string>https://github.com/Leppard/SITP.git</string>
 		<key>D9E0BA7039772735B5E1B40E959A51C4FE638EE6</key>
 		<string>https://github.com/Leppard/GoToClass.git</string>
+		<key>F2FE0AAE95F0B87896F2BEE0B176D4FC32D691A3</key>
+		<string>https://github.com/Leppard/pop.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>GoToClass.xcodeproj</string>
@@ -23,6 +25,8 @@
 		<string>../../..</string>
 		<key>D9E0BA7039772735B5E1B40E959A51C4FE638EE6</key>
 		<string>../..</string>
+		<key>F2FE0AAE95F0B87896F2BEE0B176D4FC32D691A3</key>
+		<string>../../pop</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/Leppard/GoToClass.git</string>
@@ -47,6 +51,14 @@
 			<string>D9E0BA7039772735B5E1B40E959A51C4FE638EE6</string>
 			<key>IDESourceControlWCCName</key>
 			<string>GoToClass</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F2FE0AAE95F0B87896F2BEE0B176D4FC32D691A3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>pop</string>
 		</dict>
 	</array>
 </dict>
