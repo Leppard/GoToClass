@@ -45,15 +45,17 @@
 
 
 
-
 - (IBAction)btnSearchTeacher:(id)sender {
     
-    
     UINavigationController *vc =  [self.storyboard instantiateViewControllerWithIdentifier:@"TeachersListNC"];
-    vc.view.layer.cornerRadius = 8.f;
+//    vc.view.layer.cornerRadius = 10.f;
     vc.transitioningDelegate = self;
     vc.modalPresentationStyle = UIModalPresentationCustom;
     
+//     [vc.navigationBar setBackgroundImage:[UIImage imageNamed:@"frontPage.png"] forBarMetrics:UIBarMetricsCompact];
+    
+//    vc.navigationBar.barStyle = UIBarStyleBlackTranslucent;
+//    self.navigationController.navigationBar.alpha = 0.3;
     [self presentViewController:vc animated:YES completion:nil];
 }
 @end

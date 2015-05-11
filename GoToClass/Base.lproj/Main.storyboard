@@ -12,6 +12,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MIL-Ss-tsE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.47843137250000001" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </navigationBar>
                     <connections>
                         <segue destination="CLN-zK-GaY" kind="relationship" relationship="rootViewController" id="Xcy-vy-DBE"/>
@@ -61,9 +63,9 @@
             <objects>
                 <tableViewController id="CLN-zK-GaY" userLabel="Teacher List VC" customClass="TeacherListVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="e4f-aw-6Zf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="Cell" id="bFc-6j-hOd">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -99,7 +101,7 @@
             <objects>
                 <tableViewController id="YFI-2Q-cAi" userLabel="Teacher Detail VC" customClass="TeacherDetailVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="fAJ-ph-AFN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -137,7 +139,7 @@
                         <viewControllerLayoutGuide type="bottom" id="euZ-bq-8fx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="064-Yb-oMI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="课程名称：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcr-Ys-eod">
