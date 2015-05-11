@@ -81,7 +81,7 @@
                     <navigationItem key="navigationItem" id="bYv-hr-wWE">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="HmJ-Mz-kTC">
                             <connections>
-                                <action selector="backToRootSelect:" destination="CLN-zK-GaY" id="lbF-3a-Djh"/>
+                                <action selector="btnDismissTList:" destination="CLN-zK-GaY" id="TgS-pN-SxW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

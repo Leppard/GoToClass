@@ -9,8 +9,10 @@
 #import "ViewController.h"
 #import "TeacherListVC.h"
 #import <pop/POP.h>
+#import "PresentingAnimator.h"
+#import "DismissingAnimator.h"
 
-@interface ViewController ()
+@interface ViewController () <UIViewControllerTransitioningDelegate>
 
 @end
 
@@ -26,23 +28,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - UIViewControllerTransitioningDelegate
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                  presentingController:(UIViewController *)presenting
+                                                                      sourceController:(UIViewController *)source
+{
+    return [PresentingAnimator new];
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    return [DismissingAnimator new];
+}
+
+
+
+
 - (IBAction)btnSearchTeacher:(id)sender {
     
-    POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
-    springAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(self.view.bounds.size.width/2, -self.view.bounds.size.height/2)];
-
-    springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2)];
-    
-    
-    //弹性值
-    springAnimation.springBounciness = 20.0;
-    //弹性速度
-    springAnimation.springSpeed = 10.0;
     
     UINavigationController *vc =  [self.storyboard instantiateViewControllerWithIdentifier:@"TeachersListNC"];
+    vc.view.layer.cornerRadius = 8.f;
+    vc.transitioningDelegate = self;
+    vc.modalPresentationStyle = UIModalPresentationCustom;
     
-    [vc.view pop_addAnimation:springAnimation forKey:@"WhatEverNameYouWant"];
-    
-    [self presentViewController:vc animated:NO completion:nil];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 @end

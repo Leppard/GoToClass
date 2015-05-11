@@ -12,4 +12,7 @@
 
 @property(nonatomic, strong)NSArray *noRepeatTeachersList;
 
+
+- (IBAction)btnDismissTList:(id)sender;
+
 @end

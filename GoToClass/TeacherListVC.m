@@ -22,7 +22,7 @@
     self.noRepeatTeachersList = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     [super viewDidLoad];
 
-    
+    self.tableView.layer.cornerRadius = 10.f;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -140,10 +140,11 @@
 }
 */
 
--(IBAction)backToRootSelect:(id)sender{
-    
-    [self.navigationController popViewControllerAnimated:YES];
-    
-}
 
+#pragma mark - btn Dismiss NC
+
+- (IBAction)btnDismissTList:(id)sender {
+    
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
 @end
