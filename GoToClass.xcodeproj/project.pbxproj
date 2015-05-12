@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8C4118EC1AFF0F49000B4EE0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8C4118EB1AFF0F49000B4EE0 /* Podfile */; };
+		8C7C65FD1B0250B100D52BB2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C7C65FC1B0250B100D52BB2 /* Images.xcassets */; };
 		8C7E81A71AE3BA9D001CE796 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E81A61AE3BA9D001CE796 /* main.m */; };
 		8C7E81AA1AE3BA9D001CE796 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E81A91AE3BA9D001CE796 /* AppDelegate.m */; };
 		8C7E81AD1AE3BA9D001CE796 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E81AC1AE3BA9D001CE796 /* ViewController.m */; };
 		8C7E81B01AE3BA9D001CE796 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C7E81AE1AE3BA9D001CE796 /* Main.storyboard */; };
-		8C7E81B21AE3BA9D001CE796 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C7E81B11AE3BA9D001CE796 /* Images.xcassets */; };
 		8C7E81B51AE3BA9D001CE796 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C7E81B31AE3BA9D001CE796 /* LaunchScreen.xib */; };
 		8C7E81C11AE3BA9D001CE796 /* GoToClassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E81C01AE3BA9D001CE796 /* GoToClassTests.m */; };
 		8C7E81CC1AE3BD7D001CE796 /* TeacherListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E81CB1AE3BD7D001CE796 /* TeacherListVC.m */; };
@@ -40,6 +40,7 @@
 		35DA44A982ED8C75C67CB9F6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACA81095B654AACC06686A9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8C4118EB1AFF0F49000B4EE0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		8C7C65FC1B0250B100D52BB2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8C7E81A11AE3BA9D001CE796 /* GoToClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoToClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C7E81A51AE3BA9D001CE796 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C7E81A61AE3BA9D001CE796 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		8C7E81AB1AE3BA9D001CE796 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8C7E81AC1AE3BA9D001CE796 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8C7E81AF1AE3BA9D001CE796 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8C7E81B11AE3BA9D001CE796 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8C7E81B41AE3BA9D001CE796 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8C7E81BA1AE3BA9D001CE796 /* GoToClassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoToClassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C7E81BF1AE3BA9D001CE796 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,8 +145,8 @@
 				8C7E81A91AE3BA9D001CE796 /* AppDelegate.m */,
 				8C7E81AE1AE3BA9D001CE796 /* Main.storyboard */,
 				8C8B55B11AE4BD5700E75E02 /* TeacherDetailCell.xib */,
-				8C7E81B11AE3BA9D001CE796 /* Images.xcassets */,
 				8C7E81B31AE3BA9D001CE796 /* LaunchScreen.xib */,
+				8C7C65FC1B0250B100D52BB2 /* Images.xcassets */,
 				8C7E81A41AE3BA9D001CE796 /* Supporting Files */,
 			);
 			path = GoToClass;
@@ -283,10 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C4118EC1AFF0F49000B4EE0 /* Podfile in Resources */,
+				8C7C65FD1B0250B100D52BB2 /* Images.xcassets in Resources */,
 				8C7E81B01AE3BA9D001CE796 /* Main.storyboard in Resources */,
 				8C8B55B21AE4BD5700E75E02 /* TeacherDetailCell.xib in Resources */,
 				8C7E81B51AE3BA9D001CE796 /* LaunchScreen.xib in Resources */,
-				8C7E81B21AE3BA9D001CE796 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

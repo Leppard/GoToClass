@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
 
-    self.navigationController.navigationBar.alpha = 0.3;
+//    self.navigationController.navigationBar.alpha = 0.3;
 }
 
 - (void)didReceiveMemoryWarning {

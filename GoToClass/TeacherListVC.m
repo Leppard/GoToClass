@@ -46,13 +46,25 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    
+    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    if(indexPath.row%2 == 0){
+        
+        UIImageView *view = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"blueLabel"]];
+        cell.backgroundView = view;
+    }
+    
+    else{
+       
+        UIImageView *view = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"whiteLabel"]];
+        cell.backgroundView = view;
     }
     
     NSString *teacherName = self.noRepeatTeachersList[indexPath.row];
     cell.textLabel.text = teacherName;
+
     return cell;
 }
 
