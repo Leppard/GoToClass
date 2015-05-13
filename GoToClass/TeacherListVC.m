@@ -62,12 +62,24 @@
         cell.backgroundView = view;
     }
     
-    UIFont *font = [UIFont fontWithName:@"YuppySC-Regular" size:15];
+    UIFont *font = [UIFont fontWithName:@"YuppySC-Regular" size:20];
     [cell.textLabel setFont:font];
 
     NSString *teacherName = self.noRepeatTeachersList[indexPath.row];
     cell.textLabel.text = teacherName;
 
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(312, 12, 22, 20)];
+    
+    btn.tag = indexPath.row;
+ 
+    UIImage *image = [UIImage imageNamed:@"info"];
+    
+    [btn setBackgroundImage:image forState:UIControlStateNormal];
+    
+    [btn addTarget:self action:@selector(btnShowTeacherInfo:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [cell.contentView addSubview:btn];
+    
     return cell;
 }
 
@@ -110,8 +122,19 @@
 
 
 
-#pragma mark - btn Dismiss NC
 
+- (void)btnShowTeacherInfo:(UIButton *)btn{
+    
+    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherInfo"];
+    
+    NSString *teacherName = self.noRepeatTeachersList[btn.tag];
+    
+    vc.navigationItem.title = teacherName;
+    [self.navigationController pushViewController:vc animated:YES];
+
+}
+
+#pragma mark - btn Dismiss NC
 - (IBAction)btnDismissTList:(id)sender {
     
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
