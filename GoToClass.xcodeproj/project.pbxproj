@@ -23,6 +23,7 @@
 		8C8B55B51AE4E59E00E75E02 /* ChooseCourseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B55B41AE4E59E00E75E02 /* ChooseCourseVC.m */; };
 		8C99D96C1B00583000947568 /* DismissingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C99D9691B00583000947568 /* DismissingAnimator.m */; };
 		8C99D96D1B00583000947568 /* PresentingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C99D96B1B00583000947568 /* PresentingAnimator.m */; };
+		8CF4FE521B02F60100489FDE /* Yuppy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CF4FE511B02F54300489FDE /* Yuppy.ttf */; };
 		C83F636C763FC462068354AE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DA44A982ED8C75C67CB9F6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		8C99D9691B00583000947568 /* DismissingAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissingAnimator.m; sourceTree = "<group>"; };
 		8C99D96A1B00583000947568 /* PresentingAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentingAnimator.h; sourceTree = "<group>"; };
 		8C99D96B1B00583000947568 /* PresentingAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentingAnimator.m; sourceTree = "<group>"; };
+		8CF4FE511B02F54300489FDE /* Yuppy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Yuppy.ttf; sourceTree = "<group>"; };
 		C78A0DB2A4029030420979EC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +157,7 @@
 		8C7E81A41AE3BA9D001CE796 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8CF4FE511B02F54300489FDE /* Yuppy.ttf */,
 				8C7E81A51AE3BA9D001CE796 /* Info.plist */,
 				8C7E81A61AE3BA9D001CE796 /* main.m */,
 			);
@@ -282,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CF4FE521B02F60100489FDE /* Yuppy.ttf in Resources */,
 				8C4118EC1AFF0F49000B4EE0 /* Podfile in Resources */,
 				8C7C65FD1B0250B100D52BB2 /* Images.xcassets in Resources */,
 				8C7E81B01AE3BA9D001CE796 /* Main.storyboard in Resources */,

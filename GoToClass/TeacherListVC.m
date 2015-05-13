@@ -46,7 +46,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+//    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
@@ -62,6 +62,9 @@
         cell.backgroundView = view;
     }
     
+    UIFont *font = [UIFont fontWithName:@"YuppySC-Regular" size:15];
+    [cell.textLabel setFont:font];
+
     NSString *teacherName = self.noRepeatTeachersList[indexPath.row];
     cell.textLabel.text = teacherName;
 
