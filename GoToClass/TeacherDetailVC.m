@@ -43,10 +43,20 @@
         
     UITableViewCell *cell = [nib objectAtIndex:0];
     
+    UIImageView *view = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"CourseD"]];
+    cell.backgroundView = view;
+    
     Course *course = self.courseListOfTeacher[indexPath.row];
     self.courseName.text = course.name;
     self.week.text = [course setWeekDayFormat:course.weekDate];
     self.time.text = [course setDayTimeFormat:course.dayTime];
+    
+    UIFont *nameFont = [UIFont fontWithName:@"YuppySC-Regular" size:22];
+    [self.courseName setFont:nameFont];
+    
+    UIFont *font = [UIFont fontWithName:@"YuppySC-Regular" size:17];
+    [self.week setFont:font];
+    [self.time setFont:font];
     
     return cell;
 }
