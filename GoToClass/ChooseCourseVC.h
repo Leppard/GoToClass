@@ -15,6 +15,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *courseName;
 @property (weak, nonatomic) IBOutlet UILabel *week;
 @property (weak, nonatomic) IBOutlet UILabel *time;
+@property (weak, nonatomic) IBOutlet UILabel *teacher;
+@property (weak, nonatomic) IBOutlet UILabel *address;
+@property (weak, nonatomic) IBOutlet UILabel *room;
 - (IBAction)confirmToChooseClass:(id)sender;
+- (IBAction)btnPopChooseCourseVC:(id)sender;
 
 @end

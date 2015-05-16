@@ -15,6 +15,10 @@
 
 @implementation TeacherDetailVC
 
+- (void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBarHidden = NO;
+}
+
 - (void)viewDidLoad {
 
 //    self.navigationController.navigationBar.alpha = 0.3;
@@ -43,8 +47,10 @@
         
     UITableViewCell *cell = [nib objectAtIndex:0];
     
-    UIImageView *view = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"CourseD"]];
+    UIImageView *view = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"CourseDetail"]];
     cell.backgroundView = view;
+    UIColor *textColor = [UIColor colorWithRed:84.0/255 green:167.0/255 blue:178.0/255 alpha:1];
+
     
     Course *course = self.courseListOfTeacher[indexPath.row];
     self.courseName.text = course.name;
@@ -53,10 +59,14 @@
     
     UIFont *nameFont = [UIFont fontWithName:@"YuppySC-Regular" size:22];
     [self.courseName setFont:nameFont];
+    self.courseName.textColor = textColor;
     
     UIFont *font = [UIFont fontWithName:@"YuppySC-Regular" size:17];
     [self.week setFont:font];
+    self.week.textColor = textColor;
+    
     [self.time setFont:font];
+    self.time.textColor = textColor;
     
     return cell;
 }
@@ -67,6 +77,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [self performSegueWithIdentifier:@"pushToSelection" sender:self.courseListOfTeacher[indexPath.row]];
+    
+    [self.tableView cellForRowAtIndexPath:indexPath].selected = NO;
 
 }
 
@@ -77,7 +89,7 @@
         vc.course = sender;
     }
 
-
+    
 }
 
 /*

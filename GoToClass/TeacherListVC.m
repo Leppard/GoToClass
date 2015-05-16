@@ -17,6 +17,11 @@
 
 @implementation TeacherListVC
 
+- (void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBarHidden = NO;
+}
+
+
 - (void)viewDidLoad {
     NSData *data = [[NSUserDefaults standardUserDefaults]objectForKey:@"NoRepeatTeachersList"];
     self.noRepeatTeachersList = [NSKeyedUnarchiver unarchiveObjectWithData:data];
@@ -47,27 +52,39 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 //    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    
+    UIFont *font = [UIFont fontWithName:@"YuppySC-Regular" size:20];
+    
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
-    if(indexPath.row%2 == 0){
-        
-        UIImageView *view = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"blueLabel"]];
-        cell.backgroundView = view;
-    }
     
-    else{
        
-        UIImageView *view = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"whiteLabel"]];
+        UIImageView *view = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"row"]];
         cell.backgroundView = view;
+    
+    
+//    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(80, 18, 100, 30)];
+//    
+//    label.font = font;
+//    
+//    label.textColor = [UIColor colorWithRed:84.0/255 green:167.0/255 blue:178.0/255 alpha:1];
+    if ([cell.contentView viewWithTag:indexPath.row+1] == nil) {
+        
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(80, 18, 100, 30)];
+        
+        label.font = font;
+        
+        label.textColor = [UIColor colorWithRed:84.0/255 green:167.0/255 blue:178.0/255 alpha:1];
+        label.tag = indexPath.row+1;
+        
+        NSString *teacherName = self.noRepeatTeachersList[indexPath.row];
+        label.text = teacherName;
+        
+        [cell.contentView addSubview:label];
     }
     
-    UIFont *font = [UIFont fontWithName:@"YuppySC-Regular" size:20];
-    [cell.textLabel setFont:font];
-
-    NSString *teacherName = self.noRepeatTeachersList[indexPath.row];
-    cell.textLabel.text = teacherName;
-
+    
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(312, 12, 22, 20)];
     
     btn.tag = indexPath.row;
@@ -99,6 +116,8 @@
     NSString *teacherName = self.noRepeatTeachersList[indexPath.row];
     
     [self performSegueWithIdentifier:@"pushToTeacherDetail" sender:(teacherName)];
+    
+    [self.tableView cellForRowAtIndexPath:indexPath].selected = NO;
 
 }
 

@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 - (IBAction)btnSearchTeacher:(id)sender;
+- (IBAction)btnSearchSchool:(id)sender;
+- (IBAction)btnSearchTime:(id)sender;
+- (IBAction)btnAbout:(id)sender;
 
 @end
 

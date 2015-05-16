@@ -58,4 +58,12 @@
 //    self.navigationController.navigationBar.alpha = 0.3;
     [self presentViewController:vc animated:YES completion:nil];
 }
+
+- (IBAction)btnSearchSchool:(id)sender {
+}
+
+- (IBAction)btnSearchTime:(id)sender {
+}
+- (IBAction)btnAbout:(id)sender {
+}
 @end

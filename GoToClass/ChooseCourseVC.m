@@ -16,9 +16,19 @@
 
 @implementation ChooseCourseVC
 
+
+- (void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBarHidden = YES;
+}
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.courseName.text = self.course.name;
+    self.teacher.text = self.course.teacher;
+    self.address.text = self.course.address;
+    self.room.text = self.course.room;
     self.week.text = [self.course setWeekDayFormat:self.course.weekDate];
     self.time.text = [self.course setDayTimeFormat:self.course.dayTime];
 
@@ -57,6 +67,11 @@
     confirm.delegate = self;
     
     [confirm showInView:self.view];
+}
+
+- (IBAction)btnPopChooseCourseVC:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
