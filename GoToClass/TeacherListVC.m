@@ -9,6 +9,7 @@
 #import "TeacherListVC.h"
 #import "Course.h"
 #import "TeacherDetailVC.h"
+#import "TeacherListTableViewCell.h"
 
 
 @interface TeacherListVC ()
@@ -26,14 +27,7 @@
     NSData *data = [[NSUserDefaults standardUserDefaults]objectForKey:@"NoRepeatTeachersList"];
     self.noRepeatTeachersList = [NSKeyedUnarchiver unarchiveObjectWithData:data];
 
-//    self.tableView.layer.cornerRadius = 10.f;
-//    self.navigationController.navigationBar.alpha = 0.3;
     
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -50,52 +44,21 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-//    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
-    
-    UIFont *font = [UIFont fontWithName:@"YuppySC-Regular" size:20];
+    TeacherListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TeacherList"];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        cell = [[TeacherListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TeacherList"];
     }
     
-       
-        UIImageView *view = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"row"]];
-        cell.backgroundView = view;
+    NSString *thisTeacherName = self.noRepeatTeachersList[indexPath.row];
+    cell.teacherName.text = thisTeacherName;
     
-    
-//    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(80, 18, 100, 30)];
-//    
-//    label.font = font;
-//    
-//    label.textColor = [UIColor colorWithRed:84.0/255 green:167.0/255 blue:178.0/255 alpha:1];
-    if ([cell.contentView viewWithTag:indexPath.row+1] == nil) {
+    cell.blockForCell  = ^(void){
+        UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherInfo"];
         
-        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(80, 18, 100, 30)];
-        
-        label.font = font;
-        
-        label.textColor = [UIColor colorWithRed:84.0/255 green:167.0/255 blue:178.0/255 alpha:1];
-        label.tag = indexPath.row+1;
-        
-        NSString *teacherName = self.noRepeatTeachersList[indexPath.row];
-        label.text = teacherName;
-        
-        [cell.contentView addSubview:label];
-    }
-    
-    
-    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(312, 12, 22, 20)];
-    
-    btn.tag = indexPath.row;
- 
-    UIImage *image = [UIImage imageNamed:@"info"];
-    
-    [btn setBackgroundImage:image forState:UIControlStateNormal];
-    
-    [btn addTarget:self action:@selector(btnShowTeacherInfo:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [cell.contentView addSubview:btn];
+        vc.navigationItem.title = thisTeacherName;
+        [self.navigationController pushViewController:vc animated:YES];
+    };
     
     return cell;
 }
@@ -139,19 +102,6 @@
     }
 }
 
-
-
-
-- (void)btnShowTeacherInfo:(UIButton *)btn{
-    
-    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherInfo"];
-    
-    NSString *teacherName = self.noRepeatTeachersList[btn.tag];
-    
-    vc.navigationItem.title = teacherName;
-    [self.navigationController pushViewController:vc animated:YES];
-
-}
 
 #pragma mark - btn Dismiss NC
 - (IBAction)btnDismissTList:(id)sender {

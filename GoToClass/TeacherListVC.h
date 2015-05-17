@@ -11,7 +11,6 @@
 @interface TeacherListVC : UITableViewController
 
 @property(nonatomic, strong)NSArray *noRepeatTeachersList;
-@property (weak, nonatomic) IBOutlet UILabel *la;
 
 - (IBAction)btnDismissTList:(id)sender;
 

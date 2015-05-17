@@ -17,6 +17,7 @@
 		8C7E81C11AE3BA9D001CE796 /* GoToClassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E81C01AE3BA9D001CE796 /* GoToClassTests.m */; };
 		8C7E81CC1AE3BD7D001CE796 /* TeacherListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E81CB1AE3BD7D001CE796 /* TeacherListVC.m */; };
 		8C7E81D01AE3E0B3001CE796 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E81CF1AE3E0B3001CE796 /* Course.m */; };
+		8C80B4CF1B085B14005A8F77 /* TeacherListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C80B4CE1B085B14005A8F77 /* TeacherListTableViewCell.m */; };
 		8C8B55AD1AE3E7B200E75E02 /* CoursesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B55AC1AE3E7B200E75E02 /* CoursesModel.m */; };
 		8C8B55B01AE417A700E75E02 /* TeacherDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B55AF1AE417A700E75E02 /* TeacherDetailVC.m */; };
 		8C8B55B21AE4BD5700E75E02 /* TeacherDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C8B55B11AE4BD5700E75E02 /* TeacherDetailCell.xib */; };
@@ -58,6 +59,8 @@
 		8C7E81CB1AE3BD7D001CE796 /* TeacherListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherListVC.m; sourceTree = "<group>"; };
 		8C7E81CE1AE3E0B3001CE796 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
 		8C7E81CF1AE3E0B3001CE796 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		8C80B4CD1B085B14005A8F77 /* TeacherListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherListTableViewCell.h; sourceTree = "<group>"; };
+		8C80B4CE1B085B14005A8F77 /* TeacherListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherListTableViewCell.m; sourceTree = "<group>"; };
 		8C8B55AB1AE3E7B200E75E02 /* CoursesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoursesModel.h; sourceTree = "<group>"; };
 		8C8B55AC1AE3E7B200E75E02 /* CoursesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoursesModel.m; sourceTree = "<group>"; };
 		8C8B55AE1AE417A700E75E02 /* TeacherDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherDetailVC.h; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				8C7E81CD1AE3C7BA001CE796 /* DataModel */,
+				8C80B4CD1B085B14005A8F77 /* TeacherListTableViewCell.h */,
+				8C80B4CE1B085B14005A8F77 /* TeacherListTableViewCell.m */,
 				8C7E81CA1AE3BD7D001CE796 /* TeacherListVC.h */,
 				8C7E81CB1AE3BD7D001CE796 /* TeacherListVC.m */,
 				8C8B55AE1AE417A700E75E02 /* TeacherDetailVC.h */,
@@ -346,6 +351,7 @@
 				8C99D96C1B00583000947568 /* DismissingAnimator.m in Sources */,
 				8C7E81AD1AE3BA9D001CE796 /* ViewController.m in Sources */,
 				8C7E81AA1AE3BA9D001CE796 /* AppDelegate.m in Sources */,
+				8C80B4CF1B085B14005A8F77 /* TeacherListTableViewCell.m in Sources */,
 				8C7E81A71AE3BA9D001CE796 /* main.m in Sources */,
 				8C7E81CC1AE3BD7D001CE796 /* TeacherListVC.m in Sources */,
 				8C99D96D1B00583000947568 /* PresentingAnimator.m in Sources */,
