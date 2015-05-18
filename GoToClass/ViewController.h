@@ -13,6 +13,7 @@
 - (IBAction)btnSearchSchool:(id)sender;
 - (IBAction)btnSearchTime:(id)sender;
 - (IBAction)btnAbout:(id)sender;
+- (IBAction)btnMySelection:(id)sender;
 
 @end
 

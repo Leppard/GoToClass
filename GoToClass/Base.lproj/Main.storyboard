@@ -86,6 +86,15 @@
                                     <action selector="btnSearchTeacher:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ezF-kU-GIQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ff4-d4-0yy" userLabel="选课">
+                                <rect key="frame" x="143" y="619" width="105" height="48"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnMySelection:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="O9d-Qq-zpl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -140,7 +149,7 @@
         <!--Teacher Detail VC-->
         <scene sceneID="G25-AK-Tpe">
             <objects>
-                <tableViewController id="YFI-2Q-cAi" userLabel="Teacher Detail VC" customClass="TeacherDetailVC" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CourseDetailVC" id="YFI-2Q-cAi" userLabel="Teacher Detail VC" customClass="TeacherDetailVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="186" sectionHeaderHeight="22" sectionFooterHeight="22" id="fAJ-ph-AFN">
                         <rect key="frame" x="0.0" y="64" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,16 +207,6 @@
                                 <color key="textColor" red="0.3294117647" green="0.65490196079999996" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ay1-5T-vgW">
-                                <rect key="frame" x="106" y="539" width="184" height="120"/>
-                                <fontDescription key="fontDescription" name="YuppySC-Regular" family="Yuppy SC" pointSize="26"/>
-                                <state key="normal" title="去蹭课！">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="confirmToChooseClass:" destination="Lle-pO-Svv" eventType="touchUpInside" id="J4u-zr-1iE"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxQ-Mt-oLW">
                                 <rect key="frame" x="73" y="104" width="215" height="33"/>
                                 <fontDescription key="fontDescription" name="YuppySC-Regular" family="Yuppy SC" pointSize="24"/>
@@ -239,6 +238,20 @@
                                 </state>
                                 <connections>
                                     <action selector="btnPopChooseCourseVC:" destination="Lle-pO-Svv" eventType="touchUpInside" id="4O6-gt-D5J"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Goto" translatesAutoresizingMaskIntoConstraints="NO" id="hKU-pg-IsK">
+                                <rect key="frame" x="93" y="582" width="34" height="34"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ay1-5T-vgW">
+                                <rect key="frame" x="110" y="539" width="184" height="120"/>
+                                <fontDescription key="fontDescription" name="YuppySC-Regular" family="Yuppy SC" pointSize="26"/>
+                                <state key="normal" title="去蹭课！">
+                                    <color key="titleColor" red="1" green="0.89569522932097911" blue="0.68499274131887999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmToChooseClass:" destination="Lle-pO-Svv" eventType="touchUpInside" id="J4u-zr-1iE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -282,6 +295,7 @@
     </scenes>
     <resources>
         <image name="ChooseCourse" width="886" height="1655"/>
+        <image name="Goto" width="200" height="200"/>
         <image name="close" width="58" height="58"/>
         <image name="frontPage" width="3125" height="5559"/>
     </resources>

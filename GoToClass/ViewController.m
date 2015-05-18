@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "TeacherListVC.h"
+#import "TeacherDetailVC.h"
+#import "PersonalCourseModel.h"
 #import <pop/POP.h>
 #import "PresentingAnimator.h"
 #import "DismissingAnimator.h"
@@ -48,14 +50,10 @@
 - (IBAction)btnSearchTeacher:(id)sender {
     
     UINavigationController *vc =  [self.storyboard instantiateViewControllerWithIdentifier:@"TeachersListNC"];
-//    vc.view.layer.cornerRadius = 10.f;
+
     vc.transitioningDelegate = self;
     vc.modalPresentationStyle = UIModalPresentationCustom;
     
-//     [vc.navigationBar setBackgroundImage:[UIImage imageNamed:@"frontPage.png"] forBarMetrics:UIBarMetricsCompact];
-    
-//    vc.navigationBar.barStyle = UIBarStyleBlackTranslucent;
-//    self.navigationController.navigationBar.alpha = 0.3;
     [self presentViewController:vc animated:YES completion:nil];
 }
 
@@ -65,5 +63,18 @@
 - (IBAction)btnSearchTime:(id)sender {
 }
 - (IBAction)btnAbout:(id)sender {
+}
+
+- (IBAction)btnMySelection:(id)sender {
+    
+    TeacherDetailVC *detailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CourseDetailVC"];
+    
+    PersonalCourseModel *personalList = [[PersonalCourseModel alloc]init];
+    detailVC.courseListOfTeacher = [personalList getCourseList];
+    
+    UINavigationController *nVC = [[UINavigationController alloc]initWithRootViewController:detailVC];
+    
+    [self presentViewController:nVC animated:YES completion:nil];
+    
 }
 @end

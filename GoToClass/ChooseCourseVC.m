@@ -7,6 +7,7 @@
 //
 
 #import "ChooseCourseVC.h"
+#import "PersonalCourseModel.h"
 #import <EventKit/EventKit.h>
 #import <EventKitUI/EventKitUI.h>
 
@@ -40,15 +41,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark - Button Action
 
@@ -69,11 +61,6 @@
     [confirm showInView:self.view];
 }
 
-- (IBAction)btnPopChooseCourseVC:(id)sender {
-    
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     
@@ -84,6 +71,17 @@
     else if(buttonIndex == 1){
         [self lookUpMap];
     }
+    
+    PersonalCourseModel *model = [[PersonalCourseModel alloc]init];
+    [model addTheCourse:self.course];
+    
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"选课成功！"
+                          message:@"课程已添加到课表"
+                          delegate:self
+                          cancelButtonTitle:@"确定"
+                          otherButtonTitles:nil];
+    [alert show];
 }
 
 - (void)addToCalendar{
@@ -116,10 +114,6 @@
              compt = [self setEventTime:self.course.dayTime usingDateComponent:compt];
              
              NSDate *aimDay = [cal dateFromComponents:compt];
-             
-             //             NSTimeZone *zone = [NSTimeZone systemTimeZone];
-             //             NSInteger interval = [zone secondsFromGMTForDate:aimDay];
-             //             NSDate *aimTime = [aimDay dateByAddingTimeInterval:interval];
              
              //系统Calendar在格林尼治时间上自动会＋8个小时调整到东八区时间，所以直接输入格林尼治时间
              myEvent.startDate = aimDay;
@@ -171,6 +165,11 @@
         [alert show];
     
     }
+}
+
+- (IBAction)btnPopChooseCourseVC:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

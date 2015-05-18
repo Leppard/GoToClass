@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CoursesModel.h"
+#import "PersonalCourseModel.h"
 
 @interface AppDelegate ()
 
@@ -18,8 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    CoursesModel *model = [[CoursesModel alloc]init];
-    [model initCoursesModel];
+    [[[CoursesModel alloc]init] initCoursesModel];
+    
+    [[[PersonalCourseModel alloc]init] initPersonalCourseModel];
+    
+    
     // Override point for customization after application launch.
     return YES;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C2FD0361B0A1D440053E377 /* PersonalCourseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FD0351B0A1D440053E377 /* PersonalCourseModel.m */; };
 		8C4118EC1AFF0F49000B4EE0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8C4118EB1AFF0F49000B4EE0 /* Podfile */; };
 		8C7C65FD1B0250B100D52BB2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C7C65FC1B0250B100D52BB2 /* Images.xcassets */; };
 		8C7E81A71AE3BA9D001CE796 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E81A61AE3BA9D001CE796 /* main.m */; };
@@ -41,6 +42,8 @@
 /* Begin PBXFileReference section */
 		35DA44A982ED8C75C67CB9F6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACA81095B654AACC06686A9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8C2FD0341B0A1D440053E377 /* PersonalCourseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalCourseModel.h; sourceTree = "<group>"; };
+		8C2FD0351B0A1D440053E377 /* PersonalCourseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalCourseModel.m; sourceTree = "<group>"; };
 		8C4118EB1AFF0F49000B4EE0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8C7C65FC1B0250B100D52BB2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8C7E81A11AE3BA9D001CE796 /* GoToClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoToClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +196,8 @@
 				8C7E81CF1AE3E0B3001CE796 /* Course.m */,
 				8C8B55AB1AE3E7B200E75E02 /* CoursesModel.h */,
 				8C8B55AC1AE3E7B200E75E02 /* CoursesModel.m */,
+				8C2FD0341B0A1D440053E377 /* PersonalCourseModel.h */,
+				8C2FD0351B0A1D440053E377 /* PersonalCourseModel.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -352,6 +357,7 @@
 				8C7E81AD1AE3BA9D001CE796 /* ViewController.m in Sources */,
 				8C7E81AA1AE3BA9D001CE796 /* AppDelegate.m in Sources */,
 				8C80B4CF1B085B14005A8F77 /* TeacherListTableViewCell.m in Sources */,
+				8C2FD0361B0A1D440053E377 /* PersonalCourseModel.m in Sources */,
 				8C7E81A71AE3BA9D001CE796 /* main.m in Sources */,
 				8C7E81CC1AE3BD7D001CE796 /* TeacherListVC.m in Sources */,
 				8C99D96D1B00583000947568 /* PresentingAnimator.m in Sources */,
