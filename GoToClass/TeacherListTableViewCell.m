@@ -35,7 +35,7 @@
         
         [self.contentView addSubview:self.teacherName];
         [self.contentView addSubview:btn];
-
+        
     }
     return self;
     
@@ -46,8 +46,6 @@
     self.blockForCell();
     
 }
-    
-    
 
 
 @end
