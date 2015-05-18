@@ -74,7 +74,18 @@
     
     UINavigationController *nVC = [[UINavigationController alloc]initWithRootViewController:detailVC];
     
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(backToRootForNVCBarItemSelector:)];
+    detailVC.navigationItem.leftBarButtonItem = leftButton;
+    
     [self presentViewController:nVC animated:YES completion:nil];
     
+    
+}
+
+- (void)backToRootForNVCBarItemSelector:(UIBarButtonItem *)thisItem {
+    
+    UINavigationController *nVC = thisItem.target;
+    [nVC dismissViewControllerAnimated:YES completion:nil];
+
 }
 @end
