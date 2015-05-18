@@ -50,6 +50,8 @@
         cell = [[TeacherListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TeacherList"];
     }
     
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     NSString *thisTeacherName = self.noRepeatTeachersList[indexPath.row];
     cell.teacherName.text = thisTeacherName;
     
