@@ -49,9 +49,7 @@
     if (cell == nil) {
         cell = [[TeacherListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TeacherList"];
     }
-//    [cell setSelected:YES animated:NO];
     
-//    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSString *thisTeacherName = self.noRepeatTeachersList[indexPath.row];
     cell.teacherName.text = thisTeacherName;
     

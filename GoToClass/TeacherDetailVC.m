@@ -49,6 +49,9 @@
     
     UIImageView *view = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"CourseDetail"]];
     cell.backgroundView = view;
+    self.tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"frontPageBackground"]];
+    
+    
     UIColor *textColor = [UIColor colorWithRed:84.0/255 green:167.0/255 blue:178.0/255 alpha:1];
 
     
@@ -88,7 +91,6 @@
         ChooseCourseVC *vc = segue.destinationViewController;
         vc.course = sender;
     }
-
     
 }
 

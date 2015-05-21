@@ -16,6 +16,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
     if(self){
+        self.backgroundColor = [UIColor clearColor];
         self.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"row"]];
         
         self.teacherName = [[UILabel alloc]initWithFrame:CGRectMake(80, 18, 100, 30)];

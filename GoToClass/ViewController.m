@@ -13,6 +13,8 @@
 #import <pop/POP.h>
 #import "PresentingAnimator.h"
 #import "DismissingAnimator.h"
+#import "PersonalCourseVC.h"
+#import "ListOfSchoolVC.h"
 
 @interface ViewController () <UIViewControllerTransitioningDelegate>
 
@@ -58,6 +60,14 @@
 }
 
 - (IBAction)btnSearchSchool:(id)sender {
+    ListOfSchoolVC *vc = [[ListOfSchoolVC alloc]init];
+    
+    UINavigationController *nVC = [[UINavigationController alloc]initWithRootViewController:vc];
+    nVC.transitioningDelegate = self;
+    nVC.modalPresentationStyle = UIModalPresentationCustom;
+    
+    [self presentViewController:nVC animated:YES completion:nil];
+    
 }
 
 - (IBAction)btnSearchTime:(id)sender {
@@ -67,15 +77,15 @@
 
 - (IBAction)btnMySelection:(id)sender {
     
-    TeacherDetailVC *detailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CourseDetailVC"];
-    
+    PersonalCourseVC *vc = [[PersonalCourseVC alloc]init];
+
     PersonalCourseModel *personalList = [[PersonalCourseModel alloc]init];
-    detailVC.courseListOfTeacher = [personalList getCourseList];
+    vc.personalCourseList = [personalList getCourseList];
     
-    UINavigationController *nVC = [[UINavigationController alloc]initWithRootViewController:detailVC];
+    UINavigationController *nVC = [[UINavigationController alloc]initWithRootViewController:vc];
     
     UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(backToRootForNVCBarItemSelector:)];
-    detailVC.navigationItem.leftBarButtonItem = leftButton;
+    vc.navigationItem.leftBarButtonItem = leftButton;
     
     [self presentViewController:nVC animated:YES completion:nil];
     

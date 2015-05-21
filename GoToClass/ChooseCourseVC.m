@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.courseName.text = self.course.name;
     self.teacher.text = self.course.teacher;
     self.address.text = self.course.address;
