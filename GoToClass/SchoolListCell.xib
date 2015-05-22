@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListOfSchoolVC">
             <connections>
+                <outlet property="imageOfSchool" destination="U2t-M9-5uh" id="eDg-XP-ZQi"/>
                 <outlet property="schoolName" destination="zgd-33-YWF" id="lo5-4u-dRB"/>
             </connections>
         </placeholder>
@@ -22,13 +23,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgd-33-YWF" userLabel="school">
-                        <rect key="frame" x="156" y="25" width="210" height="57"/>
+                        <rect key="frame" x="156" y="35" width="210" height="57"/>
                         <fontDescription key="fontDescription" name="YuppySC-Regular" family="Yuppy SC" pointSize="30"/>
                         <color key="textColor" red="0.3294117647" green="0.65490196079999996" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U2t-M9-5uh">
-                        <rect key="frame" x="279" y="102" width="74" height="74"/>
+                        <rect key="frame" x="274" y="100" width="74" height="74"/>
                     </imageView>
                 </subviews>
             </tableViewCellContentView>

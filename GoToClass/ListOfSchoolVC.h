@@ -11,5 +11,6 @@
 @interface ListOfSchoolVC : UITableViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *schoolName;
+@property (weak, nonatomic) IBOutlet UIImageView *imageOfSchool;
 
 @end

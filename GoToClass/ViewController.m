@@ -61,7 +61,7 @@
 
 - (IBAction)btnSearchSchool:(id)sender {
     ListOfSchoolVC *vc = [[ListOfSchoolVC alloc]init];
-    
+    vc.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     UINavigationController *nVC = [[UINavigationController alloc]initWithRootViewController:vc];
     nVC.transitioningDelegate = self;
     nVC.modalPresentationStyle = UIModalPresentationCustom;
@@ -78,7 +78,8 @@
 - (IBAction)btnMySelection:(id)sender {
     
     PersonalCourseVC *vc = [[PersonalCourseVC alloc]init];
-
+    vc.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     PersonalCourseModel *personalList = [[PersonalCourseModel alloc]init];
     vc.personalCourseList = [personalList getCourseList];
     

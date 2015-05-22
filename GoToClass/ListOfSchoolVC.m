@@ -44,12 +44,15 @@
     switch (indexPath.row) {
         case 0:
             self.schoolName.text = @"同济大学";
+            self.imageOfSchool.image = [UIImage imageNamed:@"TONGJI"];
             break;
         case 1:
             self.schoolName.text = @"复旦大学";
+            self.imageOfSchool.image = [UIImage imageNamed:@"FUDAN"];
             break;
         case 2:
             self.schoolName.text = @"上海财经大学";
+            self.imageOfSchool.image = [UIImage imageNamed:@"SHANGHAICAIJING"];
             break;
         default:
             break;
