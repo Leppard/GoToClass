@@ -16,19 +16,20 @@
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.coursesList];
    
     [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"CoursesList"];
-    Course *course = self.coursesList[0];
-    NSMutableArray *array = [[NSMutableArray alloc]initWithObjects:course.teacher, nil];
+    Course *course1 = self.coursesList[0];
+    NSMutableArray *array = [[NSMutableArray alloc]initWithObjects:course1, nil];
     
     for(Course *course in self.coursesList){
         BOOL flag = false;
         for(NSInteger i = 0; i<array.count;i++){
-            if([course.teacher isEqualToString:array[i]]){
+            Course *cour = array[i];
+            if([course.teacher isEqualToString:cour.teacher]){
                 flag = TRUE;
                 break;
             }
         }
         if(flag == false){
-            [array addObject:course.teacher];
+            [array addObject:course];
         }
     }
     
@@ -53,6 +54,7 @@
         Course *course1 = [[Course alloc]init];
         course1.name = @"软件测试技术";
         course1.teacher = @"刘琴";
+        course1.school = @"TONGJI";
         course1.weekDate = [NSNumber numberWithInt:3];
         course1.dayTime = [NSNumber numberWithInt:2];
         course1.room = @"济事楼430";

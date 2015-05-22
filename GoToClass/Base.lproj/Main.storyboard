@@ -18,8 +18,8 @@
         <!--Navigation Controller-->
         <scene sceneID="F17-ki-XPT">
             <objects>
-                <navigationController storyboardIdentifier="TeachersListNC" navigationBarHidden="YES" id="UTk-NC-8sG" sceneMemberID="viewController">
-                    <nil key="simulatedTopBarMetrics"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lR8-uf-RuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="TeachersListNC" id="UTk-NC-8sG" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MIL-Ss-tsE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -31,7 +31,6 @@
                         <segue destination="CLN-zK-GaY" kind="relationship" relationship="rootViewController" id="Xcy-vy-DBE"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lR8-uf-RuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="349.5" y="312.5"/>
         </scene>
@@ -109,7 +108,7 @@
         <!--Teacher List VC-->
         <scene sceneID="Qzv-tb-7hj">
             <objects>
-                <tableViewController id="CLN-zK-GaY" userLabel="Teacher List VC" customClass="TeacherListVC" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TeacherListVC" id="CLN-zK-GaY" userLabel="Teacher List VC" customClass="TeacherListVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="66" sectionHeaderHeight="22" sectionFooterHeight="22" id="e4f-aw-6Zf">
                         <rect key="frame" x="0.0" y="64" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,7 +130,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="bYv-hr-wWE">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="HmJ-Mz-kTC">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="HmJ-Mz-kTC">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="btnDismissTList:" destination="CLN-zK-GaY" id="TgS-pN-SxW"/>
                             </connections>

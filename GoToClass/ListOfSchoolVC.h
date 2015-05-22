@@ -13,4 +13,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *schoolName;
 @property (weak, nonatomic) IBOutlet UIImageView *imageOfSchool;
 
+@property (nonatomic, strong) NSMutableArray *schoolA;
+@property (nonatomic, strong) NSMutableArray *schoolB;
+@property (nonatomic, strong) NSMutableArray *schoolC;
+
 @end

@@ -50,19 +50,30 @@
 
 
 - (IBAction)btnSearchTeacher:(id)sender {
+    TeacherListVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherListVC"];
+    NSData *data = [[NSUserDefaults standardUserDefaults]objectForKey:@"NoRepeatTeachersList"];
+    vc.noRepeatTeachersList = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    UINavigationController *nVC =  [[UINavigationController alloc]initWithRootViewController:vc];
     
-    UINavigationController *vc =  [self.storyboard instantiateViewControllerWithIdentifier:@"TeachersListNC"];
-
-    vc.transitioningDelegate = self;
-    vc.modalPresentationStyle = UIModalPresentationCustom;
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(backToRootForNVCBarItemSelector:)];
+    leftButton.tintColor = [UIColor blackColor];
+    vc.navigationItem.leftBarButtonItem = leftButton;
     
-    [self presentViewController:vc animated:YES completion:nil];
+    nVC.transitioningDelegate = self;
+    nVC.modalPresentationStyle = UIModalPresentationCustom;
+    
+    [self presentViewController:nVC animated:YES completion:nil];
 }
 
 - (IBAction)btnSearchSchool:(id)sender {
     ListOfSchoolVC *vc = [[ListOfSchoolVC alloc]init];
     vc.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     UINavigationController *nVC = [[UINavigationController alloc]initWithRootViewController:vc];
+
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(backToRootForNVCBarItemSelector:)];
+    leftButton.tintColor = [UIColor blackColor];
+    vc.navigationItem.leftBarButtonItem = leftButton;
+
     nVC.transitioningDelegate = self;
     nVC.modalPresentationStyle = UIModalPresentationCustom;
     
@@ -86,6 +97,7 @@
     UINavigationController *nVC = [[UINavigationController alloc]initWithRootViewController:vc];
     
     UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(backToRootForNVCBarItemSelector:)];
+    leftButton.tintColor = [UIColor blackColor];
     vc.navigationItem.leftBarButtonItem = leftButton;
     
     [self presentViewController:nVC animated:YES completion:nil];

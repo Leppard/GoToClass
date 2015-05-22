@@ -24,10 +24,7 @@
 
 
 - (void)viewDidLoad {
-    NSData *data = [[NSUserDefaults standardUserDefaults]objectForKey:@"NoRepeatTeachersList"];
-    self.noRepeatTeachersList = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-
-    
+    self.tableView.rowHeight = 66;
 }
 
 #pragma mark - Table view data source
@@ -50,13 +47,13 @@
         cell = [[TeacherListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TeacherList"];
     }
     
-    NSString *thisTeacherName = self.noRepeatTeachersList[indexPath.row];
-    cell.teacherName.text = thisTeacherName;
+    Course *course = self.noRepeatTeachersList[indexPath.row];
+    cell.teacherName.text = course.teacher;
     
     cell.blockForCell  = ^(void){
         UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherInfo"];
         
-        vc.navigationItem.title = thisTeacherName;
+        vc.navigationItem.title = course.teacher;
         [self.navigationController pushViewController:vc animated:YES];
     };
     
@@ -72,20 +69,11 @@
 
 #pragma mark - Control viewing info
 
-- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
-    
-    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherInfo"];
-    
-    NSString *teacherName = self.noRepeatTeachersList[indexPath.row];
-    
-    vc.navigationItem.title = teacherName;
-    [self.navigationController pushViewController:vc animated:YES];
-}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *teacherName = self.noRepeatTeachersList[indexPath.row];
+    Course *course = self.noRepeatTeachersList[indexPath.row];
     
-    [self performSegueWithIdentifier:@"pushToTeacherDetail" sender:(teacherName)];
+    [self performSegueWithIdentifier:@"pushToTeacherDetail" sender:(course.teacher)];
     
     [self.tableView cellForRowAtIndexPath:indexPath].selected = NO;
 
