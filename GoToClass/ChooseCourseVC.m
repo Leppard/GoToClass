@@ -28,7 +28,7 @@
     [super viewDidLoad];
     
     self.courseName.text = self.course.name;
-    self.teacher.text = self.course.teacher;
+    self.teacher.text = self.course.teacher.name;
     self.address.text = self.course.address;
     self.room.text = self.course.room;
     self.week.text = [self.course setWeekDayFormat:self.course.weekDate];

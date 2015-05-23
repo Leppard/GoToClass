@@ -20,8 +20,14 @@
     [super viewDidLoad];
     self.tableView.rowHeight = 200;
     self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"NoRepeatTeachersList"];
     NSMutableArray *coursesList = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    
+    self.schoolA = [[NSMutableArray alloc]init];
+    self.schoolB = [[NSMutableArray alloc]init];
+    self.schoolC = [[NSMutableArray alloc]init];
+    
     for (Course *course in coursesList){
         NSInteger i = [self convertSwitchForSchoolString:course.school];
         switch (i) {
@@ -84,7 +90,8 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    TeacherListVC *vc = [[TeacherListVC alloc]init];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    TeacherListVC *vc = [sb instantiateViewControllerWithIdentifier:@"TeacherListVC"];
     
     switch (indexPath.row) {
         case 0:
@@ -112,9 +119,9 @@
     
     if([str isEqualToString:@"TONGJI"])
         return 1;
-    else if([str isEqualToString:@"SHANGHAICAIJING"])
-        return 2;
     else if([str isEqualToString:@"FUDAN"])
+        return 2;
+    else if([str isEqualToString:@"SHANGHAICAIJING"])
         return 3;
     return 0;
 }

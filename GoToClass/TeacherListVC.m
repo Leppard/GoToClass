@@ -25,6 +25,8 @@
 
 - (void)viewDidLoad {
     self.tableView.rowHeight = 66;
+    self.tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"frontPageBackground"]];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 #pragma mark - Table view data source
@@ -48,12 +50,12 @@
     }
     
     Course *course = self.noRepeatTeachersList[indexPath.row];
-    cell.teacherName.text = course.teacher;
+    cell.teacherName.text = course.teacher.name;
     
     cell.blockForCell  = ^(void){
         UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherInfo"];
         
-        vc.navigationItem.title = course.teacher;
+        vc.navigationItem.title = course.teacher.name;
         [self.navigationController pushViewController:vc animated:YES];
     };
     
@@ -73,7 +75,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     Course *course = self.noRepeatTeachersList[indexPath.row];
     
-    [self performSegueWithIdentifier:@"pushToTeacherDetail" sender:(course.teacher)];
+    [self performSegueWithIdentifier:@"pushToTeacherDetail" sender:(course.teacher.name)];
     
     [self.tableView cellForRowAtIndexPath:indexPath].selected = NO;
 
@@ -89,7 +91,7 @@
         
         NSMutableArray *courseOfTeacher = [[NSMutableArray alloc]init];
         for(Course *course in array){
-            if([course.teacher isEqualToString:sender]){
+            if([course.teacher.name isEqualToString:sender]){
                 [courseOfTeacher addObject:course];
             }
         }

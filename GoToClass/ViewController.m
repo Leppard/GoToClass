@@ -66,8 +66,8 @@
 }
 
 - (IBAction)btnSearchSchool:(id)sender {
+    
     ListOfSchoolVC *vc = [[ListOfSchoolVC alloc]init];
-    vc.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     UINavigationController *nVC = [[UINavigationController alloc]initWithRootViewController:vc];
 
     UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(backToRootForNVCBarItemSelector:)];

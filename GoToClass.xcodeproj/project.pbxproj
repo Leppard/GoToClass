@@ -30,6 +30,7 @@
 		8C99D96C1B00583000947568 /* DismissingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C99D9691B00583000947568 /* DismissingAnimator.m */; };
 		8C99D96D1B00583000947568 /* PresentingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C99D96B1B00583000947568 /* PresentingAnimator.m */; };
 		8CF4FE521B02F60100489FDE /* Yuppy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CF4FE511B02F54300489FDE /* Yuppy.ttf */; };
+		8CF510D11B107E7200321CF5 /* Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF510D01B107E7200321CF5 /* Teacher.m */; };
 		C83F636C763FC462068354AE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DA44A982ED8C75C67CB9F6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,8 @@
 		8C99D96A1B00583000947568 /* PresentingAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentingAnimator.h; sourceTree = "<group>"; };
 		8C99D96B1B00583000947568 /* PresentingAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentingAnimator.m; sourceTree = "<group>"; };
 		8CF4FE511B02F54300489FDE /* Yuppy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Yuppy.ttf; sourceTree = "<group>"; };
+		8CF510CF1B107E7200321CF5 /* Teacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Teacher.h; sourceTree = "<group>"; };
+		8CF510D01B107E7200321CF5 /* Teacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Teacher.m; sourceTree = "<group>"; };
 		C78A0DB2A4029030420979EC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,6 +213,8 @@
 			children = (
 				8C7E81CE1AE3E0B3001CE796 /* Course.h */,
 				8C7E81CF1AE3E0B3001CE796 /* Course.m */,
+				8CF510CF1B107E7200321CF5 /* Teacher.h */,
+				8CF510D01B107E7200321CF5 /* Teacher.m */,
 				8C8B55AB1AE3E7B200E75E02 /* CoursesModel.h */,
 				8C8B55AC1AE3E7B200E75E02 /* CoursesModel.m */,
 				8C2FD0341B0A1D440053E377 /* PersonalCourseModel.h */,
@@ -372,6 +377,7 @@
 				8C8B55B01AE417A700E75E02 /* TeacherDetailVC.m in Sources */,
 				8C8B55AD1AE3E7B200E75E02 /* CoursesModel.m in Sources */,
 				8C99D96C1B00583000947568 /* DismissingAnimator.m in Sources */,
+				8CF510D11B107E7200321CF5 /* Teacher.m in Sources */,
 				8C7E81AD1AE3BA9D001CE796 /* ViewController.m in Sources */,
 				8C1A95901B0DE22C002604C8 /* ListOfSchoolVC.m in Sources */,
 				8C7E81AA1AE3BA9D001CE796 /* AppDelegate.m in Sources */,

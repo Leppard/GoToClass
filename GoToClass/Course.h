@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#include "Teacher.h"
 
 @interface Course : NSObject<NSCoding>
 
 @property(nonatomic,strong) NSString *name;
-@property(nonatomic,strong) NSString *teacher;
+@property(nonatomic,strong) Teacher *teacher;
 @property(nonatomic,strong) NSString *school;
 @property(nonatomic,strong) NSString *address;
 @property(nonatomic,strong) NSString *room;

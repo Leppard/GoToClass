@@ -53,7 +53,7 @@
     self.courseName.text = course.name;
     self.week.text = [course setWeekDayFormat:course.weekDate];
     self.time.text = [course setDayTimeFormat:course.dayTime];
-    self.teacher.text = course.teacher;
+    self.teacher.text = course.teacher.name;
     
     return cell;
 }
