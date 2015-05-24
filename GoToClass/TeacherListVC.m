@@ -7,6 +7,7 @@
 //
 
 #import "TeacherListVC.h"
+#import "TeacherInfoVC.h"
 #import "Course.h"
 #import "TeacherDetailVC.h"
 #import "TeacherListTableViewCell.h"
@@ -53,9 +54,10 @@
     cell.teacherName.text = course.teacher.name;
     
     cell.blockForCell  = ^(void){
-        UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherInfo"];
+        TeacherInfoVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherInfo"];
         
         vc.navigationItem.title = course.teacher.name;
+        vc.teacher = course.teacher;
         [self.navigationController pushViewController:vc animated:YES];
     };
     

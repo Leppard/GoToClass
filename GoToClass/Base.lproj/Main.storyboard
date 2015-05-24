@@ -12,6 +12,10 @@
             <string>YuppySC-Regular</string>
             <string>YuppySC-Regular</string>
             <string>YuppySC-Regular</string>
+            <string>YuppySC-Regular</string>
+            <string>YuppySC-Regular</string>
+            <string>YuppySC-Regular</string>
+            <string>YuppySC-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -277,29 +281,68 @@
             <point key="canvasLocation" x="2109.5" y="317.5"/>
         </scene>
         <!--Teacher Info VC-->
-        <scene sceneID="ZYs-lR-HEe">
+        <scene sceneID="nSu-Wb-ZBO">
             <objects>
-                <viewController storyboardIdentifier="TeacherInfo" id="Xcx-dL-igs" userLabel="Teacher Info VC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeacherInfo" id="wtp-if-Nch" userLabel="Teacher Info VC" customClass="TeacherInfoVC" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Gij-9t-EDu"/>
-                        <viewControllerLayoutGuide type="bottom" id="DDp-7d-Vfd"/>
+                        <viewControllerLayoutGuide type="top" id="eFY-Hp-12Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="nsE-r1-HoR"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vkX-gN-AFg">
+                    <view key="view" contentMode="scaleToFill" id="zzl-zA-bgR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TeacherInfoBG" translatesAutoresizingMaskIntoConstraints="NO" id="8jZ-Vk-SDF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5jQ-GZ-QAY">
+                                <rect key="frame" x="117" y="139" width="126" height="126"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifQ-4i-v2n" userLabel="college">
+                                <rect key="frame" x="121" y="372" width="119" height="21"/>
+                                <fontDescription key="fontDescription" name="YuppySC-Regular" family="Yuppy SC" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98d-uC-tiG" userLabel="school">
+                                <rect key="frame" x="121" y="401" width="119" height="21"/>
+                                <fontDescription key="fontDescription" name="YuppySC-Regular" family="Yuppy SC" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="1" translatesAutoresizingMaskIntoConstraints="NO" id="DL2-r2-Ias" userLabel="comment">
+                                <rect key="frame" x="67" y="458" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="YuppySC-Regular" family="Yuppy SC" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBM-Am-wYN" userLabel="name">
+                                <rect key="frame" x="115" y="296" width="131" height="45"/>
+                                <fontDescription key="fontDescription" name="YuppySC-Regular" family="Yuppy SC" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                     </view>
-                    <navigationItem key="navigationItem" title="Teacher Info" id="8sh-Vn-Epe"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="college" destination="ifQ-4i-v2n" id="ApD-Qi-8YL"/>
+                        <outlet property="comment" destination="DL2-r2-Ias" id="Epu-f6-5aD"/>
+                        <outlet property="name" destination="fBM-Am-wYN" id="mx2-Ur-3ex"/>
+                        <outlet property="picture" destination="5jQ-GZ-QAY" id="Ibo-SW-M2e"/>
+                        <outlet property="school" destination="98d-uC-tiG" id="0Da-Ea-6Zz"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zvt-X9-IIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MjS-9V-L40" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="961.5" y="1198.5"/>
+            <point key="canvasLocation" x="973.5" y="1282.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="ChooseCourse" width="886" height="1655"/>
         <image name="Goto" width="200" height="200"/>
+        <image name="TeacherInfoBG" width="750" height="1334"/>
         <image name="close" width="58" height="58"/>
         <image name="frontPage" width="3125" height="5559"/>
         <image name="frontPageBackground" width="3125" height="5559"/>
