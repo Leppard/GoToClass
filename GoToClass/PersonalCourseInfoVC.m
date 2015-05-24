@@ -9,6 +9,9 @@
 #import "PersonalCourseInfoVC.h"
 #import <EventKit/EventKit.h>
 #import <EventKitUI/EventKitUI.h>
+#import "PersonalCourseModel.h"
+#import "PersonalCourseVC.h"
+#import "Course.h"
 
 @interface PersonalCourseInfoVC ()
 
@@ -128,6 +131,44 @@
     
 }
 
+- (IBAction)deleteCourse:(id)sender {
+    UIActionSheet *confirm = [[UIActionSheet alloc] init];
+    
+    confirm.title = @"确定要删除选课？";
+    
+    [confirm addButtonWithTitle:@"确定"];
+    [confirm addButtonWithTitle:@"取消"];
+    
+    confirm.cancelButtonIndex = 1;
+    confirm.delegate = self;
+    
+    [confirm showInView:self.view];
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+        PersonalCourseModel *model = [[PersonalCourseModel alloc]init];
+        NSMutableArray *courseList = [model getCourseList];
+        for(Course *course in courseList){
+            if([course.name isEqualToString:self.course.name] && [course.weekDate isEqualToNumber:self.course.weekDate] && [course.dayTime isEqualToNumber:self.course.dayTime]){
+                [courseList removeObject:course];
+                break;
+            }
+        }
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:courseList];
+        [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"PersonalCourseList"];
+    
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"删除成功！"
+                          message:@"选课已成功删除"
+                          delegate:self
+                          cancelButtonTitle:@"确定"
+                          otherButtonTitles:nil];
+    [alert show];
+    PersonalCourseVC *vc = [self.navigationController viewControllers][0];
+    vc.personalCourseList = courseList;
+    [vc.tableView reloadData];
+}
 
 #pragma mark - setEventTime
 

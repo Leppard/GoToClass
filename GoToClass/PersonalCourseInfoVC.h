@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Course.h"
 
-@interface PersonalCourseInfoVC : UIViewController
+@interface PersonalCourseInfoVC : UIViewController <UIAlertViewDelegate,UIActionSheetDelegate>
 
 @property(nonatomic, strong) Course *course;
 @property (weak, nonatomic) IBOutlet UILabel *courseName;
@@ -21,5 +21,6 @@
 - (IBAction)btnLocation:(id)sender;
 - (IBAction)btnAlarm:(id)sender;
 - (IBAction)btnPopPersonalCourseInfoVC:(id)sender;
+- (IBAction)deleteCourse:(id)sender;
 
 @end
