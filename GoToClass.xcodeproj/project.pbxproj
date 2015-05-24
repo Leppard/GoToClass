@@ -30,6 +30,7 @@
 		8C99D96C1B00583000947568 /* DismissingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C99D9691B00583000947568 /* DismissingAnimator.m */; };
 		8C99D96D1B00583000947568 /* PresentingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C99D96B1B00583000947568 /* PresentingAnimator.m */; };
 		8CA3010C1B11B5ED00645C90 /* TeacherInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA3010B1B11B5ED00645C90 /* TeacherInfoVC.m */; };
+		8CA3010F1B11CC6800645C90 /* PersonalCourseInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA3010E1B11CC6800645C90 /* PersonalCourseInfoVC.m */; };
 		8CF4FE521B02F60100489FDE /* Yuppy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CF4FE511B02F54300489FDE /* Yuppy.ttf */; };
 		8CF510D11B107E7200321CF5 /* Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF510D01B107E7200321CF5 /* Teacher.m */; };
 		C83F636C763FC462068354AE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DA44A982ED8C75C67CB9F6 /* libPods.a */; };
@@ -89,6 +90,8 @@
 		8C99D96B1B00583000947568 /* PresentingAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentingAnimator.m; sourceTree = "<group>"; };
 		8CA3010A1B11B5ED00645C90 /* TeacherInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherInfoVC.h; sourceTree = "<group>"; };
 		8CA3010B1B11B5ED00645C90 /* TeacherInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherInfoVC.m; sourceTree = "<group>"; };
+		8CA3010D1B11CC6800645C90 /* PersonalCourseInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalCourseInfoVC.h; sourceTree = "<group>"; };
+		8CA3010E1B11CC6800645C90 /* PersonalCourseInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalCourseInfoVC.m; sourceTree = "<group>"; };
 		8CF4FE511B02F54300489FDE /* Yuppy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Yuppy.ttf; sourceTree = "<group>"; };
 		8CF510CF1B107E7200321CF5 /* Teacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Teacher.h; sourceTree = "<group>"; };
 		8CF510D01B107E7200321CF5 /* Teacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Teacher.m; sourceTree = "<group>"; };
@@ -169,6 +172,8 @@
 				8C8B55B41AE4E59E00E75E02 /* ChooseCourseVC.m */,
 				8C2585CB1B0B25C0003457D2 /* PersonalCourseVC.h */,
 				8C2585CC1B0B25C0003457D2 /* PersonalCourseVC.m */,
+				8CA3010D1B11CC6800645C90 /* PersonalCourseInfoVC.h */,
+				8CA3010E1B11CC6800645C90 /* PersonalCourseInfoVC.m */,
 				8C1A958E1B0DE22C002604C8 /* ListOfSchoolVC.h */,
 				8C1A958F1B0DE22C002604C8 /* ListOfSchoolVC.m */,
 				8C7E81AB1AE3BA9D001CE796 /* ViewController.h */,
@@ -395,6 +400,7 @@
 				8CA3010C1B11B5ED00645C90 /* TeacherInfoVC.m in Sources */,
 				8C8B55B51AE4E59E00E75E02 /* ChooseCourseVC.m in Sources */,
 				8C7E81D01AE3E0B3001CE796 /* Course.m in Sources */,
+				8CA3010F1B11CC6800645C90 /* PersonalCourseInfoVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

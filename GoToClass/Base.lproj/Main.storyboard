@@ -16,6 +16,12 @@
             <string>YuppySC-Regular</string>
             <string>YuppySC-Regular</string>
             <string>YuppySC-Regular</string>
+            <string>YuppySC-Regular</string>
+            <string>YuppySC-Regular</string>
+            <string>YuppySC-Regular</string>
+            <string>YuppySC-Regular</string>
+            <string>YuppySC-Regular</string>
+            <string>YuppySC-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -338,10 +344,111 @@
             </objects>
             <point key="canvasLocation" x="973.5" y="1282.5"/>
         </scene>
+        <!--Personal Course VC-->
+        <scene sceneID="LXG-LQ-kCT">
+            <objects>
+                <viewController storyboardIdentifier="PersonalCourseVC" id="KQe-tf-rCh" userLabel="Personal Course VC" customClass="PersonalCourseInfoVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q0z-Kq-icm"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hw8-7E-cqL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s57-fm-rmC">
+                        <rect key="frame" x="0.0" y="64" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frontPageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="TQd-UI-kJR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ChooseCourse" translatesAutoresizingMaskIntoConstraints="NO" id="N16-wh-gQr">
+                                <rect key="frame" x="0.0" y="-2" width="375" height="672"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfS-Pe-CFz">
+                                <rect key="frame" x="68" y="308" width="73" height="21"/>
+                                <fontDescription key="fontDescription" name="YuppySC-Regular" family="Yuppy SC" pointSize="20"/>
+                                <color key="textColor" red="0.3294117647" green="0.65490196079999996" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlT-kE-7E2">
+                                <rect key="frame" x="164" y="308" width="158" height="21"/>
+                                <fontDescription key="fontDescription" name="YuppySC-Regular" family="Yuppy SC" pointSize="20"/>
+                                <color key="textColor" red="0.3294117647" green="0.65490196079999996" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Lq-ly-G9X">
+                                <rect key="frame" x="73" y="104" width="215" height="33"/>
+                                <fontDescription key="fontDescription" name="YuppySC-Regular" family="Yuppy SC" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.96470588239999999" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="teacher" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnn-lf-WW6">
+                                <rect key="frame" x="131" y="237" width="97" height="26"/>
+                                <fontDescription key="fontDescription" name="YuppySC-Regular" family="Yuppy SC" pointSize="20"/>
+                                <color key="textColor" red="0.3294117647" green="0.65490196079999996" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUm-jx-wVD" userLabel="address">
+                                <rect key="frame" x="31" y="374" width="297" height="21"/>
+                                <fontDescription key="fontDescription" name="YuppySC-Regular" family="Yuppy SC" pointSize="16"/>
+                                <color key="textColor" red="0.3294117647" green="0.65490196079999996" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd7-bH-viP" userLabel="room">
+                                <rect key="frame" x="103" y="440" width="152" height="21"/>
+                                <fontDescription key="fontDescription" name="YuppySC-Regular" family="Yuppy SC" pointSize="18"/>
+                                <color key="textColor" red="0.3294117647" green="0.65490196079999996" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dm2-Fr-DM0" userLabel="Alarm">
+                                <rect key="frame" x="239" y="572" width="40" height="40"/>
+                                <state key="normal" image="Alarm">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAlarm:" destination="KQe-tf-rCh" eventType="touchUpInside" id="4e4-P2-DN8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhG-Zr-WMa" userLabel="Location">
+                                <rect key="frame" x="160" y="572" width="40" height="40"/>
+                                <state key="normal" image="Location">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLocation:" destination="KQe-tf-rCh" eventType="touchUpInside" id="0F1-AE-ktw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUQ-aL-LAJ">
+                                <rect key="frame" x="50" y="43" width="36" height="36"/>
+                                <state key="normal" image="close">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPopPersonalCourseInfoVC:" destination="KQe-tf-rCh" eventType="touchUpInside" id="27g-pa-9XM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="S4J-Ce-mN7"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="address" destination="gUm-jx-wVD" id="ACS-3S-W4x"/>
+                        <outlet property="courseName" destination="7Lq-ly-G9X" id="ctl-v2-w1j"/>
+                        <outlet property="room" destination="wd7-bH-viP" id="u5v-Yn-x62"/>
+                        <outlet property="teacher" destination="mnn-lf-WW6" id="m8X-07-GtF"/>
+                        <outlet property="time" destination="rlT-kE-7E2" id="H3B-sc-BzO"/>
+                        <outlet property="week" destination="nfS-Pe-CFz" id="Uk4-KB-Kad"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUE-bC-3tp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1919.5" y="1273.5"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Alarm" width="200" height="200"/>
         <image name="ChooseCourse" width="886" height="1655"/>
         <image name="Goto" width="200" height="200"/>
+        <image name="Location" width="200" height="200"/>
         <image name="TeacherInfoBG" width="750" height="1334"/>
         <image name="close" width="58" height="58"/>
         <image name="frontPage" width="3125" height="5559"/>

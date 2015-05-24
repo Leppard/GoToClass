@@ -7,6 +7,7 @@
 //
 
 #import "PersonalCourseVC.h"
+#import "PersonalCourseInfoVC.h"
 #import "Course.h"
 
 @interface PersonalCourseVC ()
@@ -15,16 +16,16 @@
 
 @implementation PersonalCourseVC
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.tableView.rowHeight = 200;
-    self.tableView.backgroundColor = [UIColor clearColor];
+- (void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBarHidden = NO;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidLoad {
+    [super viewDidLoad];    
+    self.tableView.rowHeight = 200;
+    self.tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"frontPageBackground"]];
 }
+
 
 #pragma mark - Table view data source
 
@@ -41,13 +42,18 @@
 }
 
 
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    cell.selected = NO;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PersonalCourseCell" owner:self options:nil];
     
     UITableViewCell *cell = [nib objectAtIndex:0];
     cell.backgroundColor = [UIColor clearColor];
     cell.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"personalCourse"]];
-    self.tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"frontPageBackground"]];
     
     Course *course = self.personalCourseList[indexPath.row];
     self.courseName.text = course.name;
@@ -58,6 +64,15 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    PersonalCourseInfoVC *vc = [sb instantiateViewControllerWithIdentifier:@"PersonalCourseVC"];
+    vc.course = self.personalCourseList[indexPath.row];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 
+    [self.tableView cellForRowAtIndexPath:indexPath].selected = NO;
+
+}
 
 @end
