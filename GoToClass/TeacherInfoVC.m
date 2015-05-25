@@ -16,8 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.picture.image = [UIImage imageNamed:self.teacher.picture];
+    if([UIImage imageNamed:self.teacher.picture]){
+        self.picture.image = [UIImage imageNamed:self.teacher.picture];
+    }
     self.picture.layer.masksToBounds = YES;
     self.picture.layer.cornerRadius = 50;
     

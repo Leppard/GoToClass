@@ -15,6 +15,7 @@
 #import "DismissingAnimator.h"
 #import "PersonalCourseVC.h"
 #import "ListOfSchoolVC.h"
+#import "WeekDayVC.h"
 
 @interface ViewController () <UIViewControllerTransitioningDelegate>
 
@@ -82,6 +83,18 @@
 }
 
 - (IBAction)btnSearchTime:(id)sender {
+    WeekDayVC *vc = [[WeekDayVC alloc]init];
+    UINavigationController *nVC = [[UINavigationController alloc]initWithRootViewController:vc];
+    
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(backToRootForNVCBarItemSelector:)];
+    leftButton.tintColor = [UIColor blackColor];
+    vc.navigationItem.leftBarButtonItem = leftButton;
+    
+    nVC.transitioningDelegate = self;
+    nVC.modalPresentationStyle = UIModalPresentationCustom;
+    
+    [self presentViewController:nVC animated:YES completion:nil];
+    
 }
 - (IBAction)btnAbout:(id)sender {
 }

@@ -109,9 +109,6 @@
         default:
             break;
     }
-
-    
-
 }
 
 #pragma mark - Switch using NSString as input
