@@ -22,6 +22,7 @@
             <string>YuppySC-Regular</string>
             <string>YuppySC-Regular</string>
             <string>YuppySC-Regular</string>
+            <string>YuppySC-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -43,6 +44,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lR8-uf-RuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="349.5" y="312.5"/>
+        </scene>
+        <!--About Us VC-->
+        <scene sceneID="SY3-3S-1ZV">
+            <objects>
+                <viewController storyboardIdentifier="AboutUsVC" id="ywl-SV-JZ1" userLabel="About Us VC" customClass="AboutUsVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OeP-cM-nfw"/>
+                        <viewControllerLayoutGuide type="bottom" id="MmU-6E-gne"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RyS-zq-t2u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AboutUs" translatesAutoresizingMaskIntoConstraints="NO" id="DYG-2P-H2A">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="关于我们：" translatesAutoresizingMaskIntoConstraints="NO" id="LOi-wi-Yzj">
+                                <rect key="frame" x="38" y="175" width="299" height="356"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="YuppySC-Regular" family="Yuppy SC" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="aboutUs" destination="LOi-wi-Yzj" id="TfQ-iY-VJC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YLV-FF-tgp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-181.5" y="-431.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -454,6 +489,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AboutUs" width="268" height="478"/>
         <image name="Alarm" width="200" height="200"/>
         <image name="ChooseCourse" width="886" height="1655"/>
         <image name="DEFAULT" width="96" height="96"/>

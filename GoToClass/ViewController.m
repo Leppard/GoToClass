@@ -16,6 +16,7 @@
 #import "PersonalCourseVC.h"
 #import "ListOfSchoolVC.h"
 #import "WeekDayVC.h"
+#import "AboutUsVC.h"
 
 @interface ViewController () <UIViewControllerTransitioningDelegate>
 
@@ -97,6 +98,17 @@
     
 }
 - (IBAction)btnAbout:(id)sender {
+    AboutUsVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUsVC"];
+    UINavigationController *nVC = [[UINavigationController alloc]initWithRootViewController:vc];
+    
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(backToRootForNVCBarItemSelector:)];
+    leftButton.tintColor = [UIColor blackColor];
+    vc.navigationItem.leftBarButtonItem = leftButton;
+    
+    nVC.transitioningDelegate = self;
+    nVC.modalPresentationStyle = UIModalPresentationCustom;
+    
+    [self presentViewController:nVC animated:YES completion:nil];
 }
 
 - (IBAction)btnMySelection:(id)sender {

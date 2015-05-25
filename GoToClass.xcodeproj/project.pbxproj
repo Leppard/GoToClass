@@ -16,6 +16,7 @@
 		8C526EAB1B1315BA00C539BD /* TimeSelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C526EAA1B1315BA00C539BD /* TimeSelectionTableViewCell.m */; };
 		8C526EAE1B13172000C539BD /* WeekDayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C526EAD1B13172000C539BD /* WeekDayVC.m */; };
 		8C526EB11B13640A00C539BD /* DayTimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C526EB01B13640A00C539BD /* DayTimeVC.m */; };
+		8C526EB41B136F9C00C539BD /* AboutUsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C526EB31B136F9C00C539BD /* AboutUsVC.m */; };
 		8C7C65FD1B0250B100D52BB2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C7C65FC1B0250B100D52BB2 /* Images.xcassets */; };
 		8C7E81A71AE3BA9D001CE796 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E81A61AE3BA9D001CE796 /* main.m */; };
 		8C7E81AA1AE3BA9D001CE796 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E81A91AE3BA9D001CE796 /* AppDelegate.m */; };
@@ -67,6 +68,8 @@
 		8C526EAD1B13172000C539BD /* WeekDayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekDayVC.m; sourceTree = "<group>"; };
 		8C526EAF1B13640A00C539BD /* DayTimeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTimeVC.h; sourceTree = "<group>"; };
 		8C526EB01B13640A00C539BD /* DayTimeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayTimeVC.m; sourceTree = "<group>"; };
+		8C526EB21B136F9C00C539BD /* AboutUsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsVC.h; sourceTree = "<group>"; };
+		8C526EB31B136F9C00C539BD /* AboutUsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsVC.m; sourceTree = "<group>"; };
 		8C7C65FC1B0250B100D52BB2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8C7E81A11AE3BA9D001CE796 /* GoToClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoToClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C7E81A51AE3BA9D001CE796 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				8C526EAD1B13172000C539BD /* WeekDayVC.m */,
 				8C526EAF1B13640A00C539BD /* DayTimeVC.h */,
 				8C526EB01B13640A00C539BD /* DayTimeVC.m */,
+				8C526EB21B136F9C00C539BD /* AboutUsVC.h */,
+				8C526EB31B136F9C00C539BD /* AboutUsVC.m */,
 			);
 			path = GoToClass;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 				8C526EAB1B1315BA00C539BD /* TimeSelectionTableViewCell.m in Sources */,
 				8C2585CD1B0B25C0003457D2 /* PersonalCourseVC.m in Sources */,
 				8C526EAE1B13172000C539BD /* WeekDayVC.m in Sources */,
+				8C526EB41B136F9C00C539BD /* AboutUsVC.m in Sources */,
 				8C7E81A71AE3BA9D001CE796 /* main.m in Sources */,
 				8C7E81CC1AE3BD7D001CE796 /* TeacherListVC.m in Sources */,
 				8C99D96D1B00583000947568 /* PresentingAnimator.m in Sources */,
