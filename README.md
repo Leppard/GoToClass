@@ -1,3 +1,3 @@
 # GoToClass
 
-Link: Http://Leppard.github.io/GoToClass
+Link: http://Leppard.github.io/GoToClass
